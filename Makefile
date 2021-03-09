@@ -1,4 +1,4 @@
 deploy:
 	git add -u && \
-	git commit &&\
+	git diff-index --quiet HEAD || git commit &&\
 	git push
