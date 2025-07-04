@@ -1,3 +1,7 @@
+---
+title: Nathan Jacobs' Homepage 
+rawtitle: true
+---
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -15,42 +19,38 @@
 	
 <title>Nathan Jacobs</title>
 <meta name="author" content="Nathan Jacobs">
-<link rel="icon" type="image/png" href="images/seal_icon.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="stylesheet.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
-<body style="max-width:640px; margin: auto; padding:2em;">
-<img style="max-width:200px; float:right;" alt="profile photo" src="images/nathan_jacobs.jpg" />
+<body style="max-width:800px; margin: auto; padding:2em;">
+
+<img style="max-width:200px; margin:5px; float:right;" alt="profile photo" src="images/nathan_jacobs.jpg" />
 <h1>Nathan Jacobs</h1>
 
-<p>I am a computer vision researcher, but I also work on (deep) machine learning, remote sensing, and medical imaging. If you are interested in discussing research, feel free to reach out via <a href="https://twitter.com/jacobsn">Twitter</a>, <a href="https://www.facebook.com/jacobsn">Facebook</a>, or <a href="https://www.linkedin.com/in/jacobsn/">LinkedIn</a>. You can also send me an email: my address is just the url of this site with the '.github.io' replaced by '@wustl.edu'.</p>
+<p>Nathan Jacobs earned a Ph.D. in Computer Science at Washington University in St. Louis (2010). After many years at the University of Kentucky, he is currently a Professor in the Computer Science &amp; Engineering department at Washington University in St. Louis. Dr. Jacobs' research area is computer vision; his specialty is developing learning-based algorithms and systems for processing large-scale image collections.  His current focus is on developing techniques for mining information about people and the natural world from geotagged imagery, including images from social networks, publicly available outdoor webcams, and satellites.  His research has been funded by NSF, NIH, DARPA, IARPA, NGA, ARL, AFRL, and Google.</p>
 
-<p>Current Affiliations:</p>
+<p style="text-align:center;background:#EEEEEE"> 
+	<a href="{{site.laburl}}">Research Lab</a> &nbsp;/&nbsp; <a href="cv.pdf">CV</a> &nbsp;/&nbsp; <a href="https://scholar.google.com/citations?hl=en&user=ZBgGyh8AAAAJ">Scholar</a> &nbsp;/&nbsp; <a href="https://github.com/jacobsn">Github</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/jacobsn/">LinkedIn</a></p>
+
+<h2>current roles</h2>
 <ul>
-  <li><a href="https://engineering.wustl.edu/faculty/Nathan-Jacobs.html">Professor</a> @ <a href="http://www.washu.edu/">WashU</a>: 
-    <ul>
-      <li><a href="http://cse.wustl.edu/">Computer Science &amp; Engineering</a></li>
-      <li><a href="http://ese.wustl.edu/">Electrical &amp; Systems Engineering</a></li>
-      <li><a href="https://datasciences.wustl.edu/">Computational and Data Science</a></li>
-      <li><a href="https://engineering.wustl.edu/academics/programs/imaging-science/index.html">Imaging Science</a></li>
-    </ul>
+  <li><a href="https://engineering.wustl.edu/faculty/Nathan-Jacobs.html">Professor</a> @ <a href="http://www.washu.edu/">WashU</a>: <a href="http://cse.wustl.edu/">Computer Science &amp; Engineering</a> (primary), <a href="http://ese.wustl.edu/">Electrical &amp; Systems Engineering</a>, <a href="https://datasciences.wustl.edu/">Computational and Data Science</a>, and <a href="https://engineering.wustl.edu/academics/programs/imaging-science/index.html">Imaging Science</a>
   </li>
   <li>Director: <a href="https://mvrl.cse.wustl.edu/">Multimodal Vision Research Laboratory</a></li>
+  <li>Assistant Vice Provost for <a href="https://di2accelerator.wustl.edu/">Digital Transformation</a></li>
   <li>Co-Director: <a href="https://geospatial.wustl.edu/">WashU Geospatial Research Initiative</a></li>
   <li>Research Council Member: <a href="https://taylorgeospatial.org/">Taylor Geospatial Institute</a></li>
 </ul>
 
-<p style="text-align:center;background:#EEEEEE"> 
-	Other Pages:&nbsp; <a href="https://mvrl.cse.wustl.edu/">Research Lab</a> &nbsp;/&nbsp; <a href="https://www.mvresearch.com/">Consulting</a> &nbsp;/&nbsp; <a href="cv.pdf">CV</a> &nbsp;/&nbsp; <a href="https://scholar.google.com/citations?hl=en&user=ZBgGyh8AAAAJ">Scholar</a> &nbsp;/&nbsp; <a href="https://github.com/jacobsn">Github</a></p>
-	
-<h2>Research</h2>
-<p> I am excited about using computer vision and machine learning techniques to understand the world. I have focused on a variety of problems, including time-lapse understanding, environmental monitoring, remote sensing, medical imaging, and video surveillance. You can learn more by visiting my <a href="https://mvrl.cse.wustl.edu">lab website</a> or checking out my <a href="cv.pdf">CV</a>.</p>
+<h2>selected recent publications</h3>
 
-<h2>Biography</h2>
-<p>Nathan Jacobs earned a Ph.D. in Computer Science at Washington
-University in St. Louis (2010). After many years at the University of
-Kentucky, he is currently a Professor in the Computer Science &amp; Engineering department at Washington University in St. Louis. Dr. Jacobs' research area is computer vision; his specialty is developing learning-based algorithms and systems for processing large-scale image collections.  His current focus is on developing techniques for mining information about people and the natural world from geotagged imagery, including images from social networks, publicly available outdoor webcams, and satellites.  His research has been funded by NSF, NIH, DARPA, IARPA, NGA, ARL, AFRL, and Google.</p>
+See our <a href="{{site.laburl}}/publications/">my lab's page</a> for a complete listing.
+
+{% bibliography --template bib-picture --max 10 --query @*[annotation~=spotlight] %}
+
 </body>
 </html>

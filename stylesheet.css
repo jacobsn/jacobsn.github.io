@@ -129,3 +129,24 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.bibliography {
+  border-top:1px solid #d8d2c5;
+}
+
+.bibliography .row {
+  padding-top:1ex;
+  margin-top:2ex;
+  /* border-top:1px solid #d8d2c5;*/
+}
+
+ol.bibliography {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  margin-top:1em;
+}
+
+ol.bibliography > li {
+  margin-top:1ex;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+    {% if entry.thumbnail %}
+<img width="100%" loading="lazy" alt="a thumbnail for {{ entry.title }}" src="{{ site.laburl}}{{ entry.thumbnail }}"/>
+    {% else %}
+      <img width="100%" loading="lazy" alt="" height="1" src="/images/clear.png"/>
+    {% endif %}
+    </div>
+    <div class="col-9">
+      {{reference}}
+      <br/>
+
+<a class="label label-default" data-bs-toggle="modal" data-bs-target="#{{key}}-bibtex" href="#">bibtex</a>
+
+{% include bib-links.html %}
+
+      <div class="modal" id="{{key}}-bibtex" tabindex="-1" role="dialog" aria-labelledby="{{key}} bibtex" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a class="label label-default" data-bs-dismiss="modal" href="#">close</a> &nbsp;
+            </div>
+            <div class="modal-body">
+              <pre>{{entry.bibtex}}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

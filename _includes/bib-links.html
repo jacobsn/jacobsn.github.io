@@ -1,0 +1,21 @@
+{% if entry.pdf %}
+| <a class="label label-default" href="{{entry.pdf}}">paper</a>
+{% endif %}
+{% if entry.project %}
+| <a class="label label-default" href="{{entry.project}}">website</a>
+{% endif %}
+{% if entry.doi%}
+| <a class="label label-default" href="http://dx.doi.org/{{entry.doi}}">doi</a>
+{% endif %}
+{% if entry.press %}
+| <a class="label label-default" href="{{entry.press}}">press release</a>
+{% endif %}
+{% if entry.tweet %}
+| <a class="label label-default" href="{{entry.tweet}}">tweet</a>
+{% endif %}
+{% if entry.linkedin %}
+| <a class="label label-default" href="{{entry.linkedin}}">linkedin</a>
+{% endif %}
+{% if entry.code %}
+| <a class="label label-default" href="{{entry.code}}">code</a>
+{% endif %}

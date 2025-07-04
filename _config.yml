@@ -1,0 +1,31 @@
+url : https://jacobsn.github.io
+baseurl :
+laburl : https://mvrl.cse.wustl.edu
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "deploy.sh", "Gemfile", "Makefile", "Gemfile.lock"]
+highlighter: rouge 
+
+# Themes are encouraged to use these universal variables 
+# so be sure to set them if your theme uses them.
+#
+title : Nathan Jacobs' Homepage 
+tagline: 
+author :
+  name : Nathan Jacobs 
+  email : jacobsn@wustl.edu
+  gmail : jacobsn@gmail.com
+  gplus : NathanJacobsCV
+  github : jacobsn 
+  twitter : jacobsn 
+  bitbucket : NathanJacobs 
+
+scholar:
+  style: peerj
+  locale: en
+  bibliography_template: bib 
+  bibliography: nathanjacobs.bib
+  sort_by: year, month
+  order: descending
+  bibtex_filters:
+    - latex
+
