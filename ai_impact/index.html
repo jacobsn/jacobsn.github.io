@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- St. Louis Carbon Context: Lifestyle vs. AI — Single-file self-contained calculator -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Louis Carbon Context: Lifestyle vs. AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">St. Louis Carbon Context: Lifestyle vs. AI</h1>
+      <p class="text-gray-600">See how your personal lifestyle carbon footprint in the St. Louis area compares to the carbon cost of your daily AI usage.</p>
+    </header>
+
+    <!-- Input Section -->
+    <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="inputs-heading">
+      <h2 id="inputs-heading" class="text-xl font-semibold mb-4">Adjust your inputs</h2>
+      <div class="grid gap-6 sm:grid-cols-1">
+
+        <!-- Home section -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-sm font-semibold text-gray-700 px-1">Home Energy</legend>
+
+          <!-- Simple mode inputs -->
+          <div id="home-simple" class="grid gap-4">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="sqft" class="text-sm font-medium">Home size (sq ft)</label>
+              <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+                <input type="range" id="sqft" min="300" max="5000" value="1800" step="100" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                <span id="sqft-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">1800</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="home-era" class="text-sm font-medium">Home built</label>
+              <select id="home-era" class="border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white flex-1 sm:max-w-xs">
+                <option value="pre1950">Before 1950</option>
+                <option value="1950_1979">1950 – 1979</option>
+                <option value="1980_1999" selected>1980 – 1999</option>
+                <option value="2000_2015">2000 – 2015</option>
+                <option value="post2015">2016 or newer</option>
+              </select>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="heat-type" class="text-sm font-medium">Heating system</label>
+              <select id="heat-type" class="border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white flex-1 sm:max-w-xs">
+                <option value="gas" selected>Natural gas furnace</option>
+                <option value="electric">Electric (resistance)</option>
+                <option value="heatpump">Heat pump</option>
+              </select>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="household" class="text-sm font-medium">People in household</label>
+              <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+                <input type="range" id="household" min="1" max="8" value="2" step="1" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                <span id="household-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">2</span>
+              </div>
+            </div>
+            <p id="home-estimate" class="text-xs text-gray-500 italic"></p>
+          </div>
+
+          <!-- Manual mode inputs (hidden by default) -->
+          <div id="home-manual" class="grid gap-4 hidden">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="electricity" class="text-sm font-medium">Electricity (kWh/month, whole home)</label>
+              <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+                <input type="range" id="electricity" min="0" max="3000" value="1200" step="10" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                <span id="electricity-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">1200</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="heating" class="text-sm font-medium">Natural Gas (therms/month, whole home)</label>
+              <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+                <input type="range" id="heating" min="0" max="200" value="48" step="1" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                <span id="heating-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">48</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <label for="household-manual" class="text-sm font-medium">People in household</label>
+              <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+                <input type="range" id="household-manual" min="1" max="8" value="2" step="1" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                <span id="household-manual-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 flex items-center gap-2">
+            <input type="checkbox" id="manual-toggle" class="rounded accent-blue-600">
+            <label for="manual-toggle" class="text-xs text-gray-500 cursor-pointer">I know my exact kWh and therms — let me enter them manually</label>
+          </div>
+        </fieldset>
+
+        <!-- Commuting -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <label for="vehicle-type" class="text-sm font-medium">Vehicle type</label>
+          <select id="vehicle-type" class="border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white flex-1 sm:max-w-xs">
+            <option value="gas" selected>Gas car</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="ev">Electric vehicle</option>
+          </select>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <label for="commute" class="text-sm font-medium">Daily Commute (miles/day)</label>
+          <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+            <input type="range" id="commute" min="0" max="100" value="22" step="1" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+            <span id="commute-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">22</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <label for="airtravel" class="text-sm font-medium">Air Travel (hours flown/year)</label>
+          <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+            <input type="range" id="airtravel" min="0" max="100" value="8" step="1" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+            <span id="airtravel-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">8</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <label for="aiusage" class="text-sm font-medium">AI Usage (Generative AI queries/day)</label>
+          <div class="flex items-center gap-3 flex-1 sm:max-w-xs">
+            <input type="range" id="aiusage" min="0" max="500" value="10" step="5" class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+            <span id="aiusage-value" class="text-gray-700 font-mono w-16 text-right" aria-live="polite">10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="chart-heading">
+      <h2 id="chart-heading" class="text-xl font-semibold mb-2">Your Footprint vs. Average (St. Louis)</h2>
+      <p class="text-sm text-gray-500 mb-4">Compare your total to the average person in the St. Louis area. Stacked by source so you can see the biggest contributors.</p>
+      <div class="h-[380px] w-full" style="position: relative;">
+        <canvas id="footprint-chart" role="img" aria-label="Horizontal stacked bar chart comparing your annual carbon footprint to average St. Louis, by source in kg CO2 per year"></canvas>
+      </div>
+    </section>
+
+    <!-- Results Summary -->
+    <section class="bg-white rounded-lg shadow-md p-6" aria-live="polite" aria-atomic="true">
+      <h2 class="text-xl font-semibold mb-2">Results Summary</h2>
+      <p id="results-summary" class="text-gray-700"></p>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      // ——— Emission factors ———
+      var CONFIG = {
+        electricityKgPerKwh: 0.73,
+        gasKgPerTherm: 5.3,
+        commuteWeeksPerYear: 50,
+        commuteDaysPerWeek: 5,
+        airTravelKgPerHour: 90,
+        aiKgPerQuery: 0.005,
+        daysPerYear: 365
+      };
+
+      // kg CO2 per mile by vehicle type
+      var VEHICLE_KG_PER_MILE = { gas: 0.40, hybrid: 0.23, ev: 0.13 };
+
+      // 1 therm ≈ 29.3 kWh; heat pump COP ~3
+      var THERM_TO_KWH = 29.3;
+      var HEATPUMP_COP = 3;
+
+      // ——— Per-era energy intensity (annual kWh/sqft and therms/sqft) ———
+      // Based on EIA RECS data for the Midwest/St. Louis climate zone
+      var ERA_RATES = {
+        pre1950:   { kwhPerSqft: 11, thermsPerSqft: 0.50 },
+        '1950_1979': { kwhPerSqft: 9.5, thermsPerSqft: 0.42 },
+        '1980_1999': { kwhPerSqft: 8, thermsPerSqft: 0.32 },
+        '2000_2015': { kwhPerSqft: 7, thermsPerSqft: 0.25 },
+        post2015:  { kwhPerSqft: 6, thermsPerSqft: 0.18 }
+      };
+
+      // ——— Average person in St. Louis (per-capita, ~2.4-person household) ———
+      var AVG_ST_LOUIS = (function () {
+        var avgSqft = 1800;
+        var avgEra = ERA_RATES['1980_1999'];
+        var avgHousehold = 2.4;
+        var monthlyKwh = (avgSqft * avgEra.kwhPerSqft) / 12;
+        var monthlyTherms = (avgSqft * avgEra.thermsPerSqft) / 12;
+        var electricity = (monthlyKwh * 12) * CONFIG.electricityKgPerKwh;
+        var naturalGas = (monthlyTherms * 12) * CONFIG.gasKgPerTherm;
+        var home = (electricity + naturalGas) / avgHousehold;
+        var commuting = (22 * CONFIG.commuteDaysPerWeek * CONFIG.commuteWeeksPerYear) * VEHICLE_KG_PER_MILE.gas;
+        var travel = 8 * CONFIG.airTravelKgPerHour;
+        var aiTotal = (10 * CONFIG.daysPerYear) * CONFIG.aiKgPerQuery;
+        return { home: home, commuting: commuting, travel: travel, aiTotal: aiTotal };
+      })();
+
+      // ——— Derive monthly kWh & therms from simple inputs ———
+      function getHomeEnergy() {
+        var isManual = document.getElementById('manual-toggle').checked;
+        if (isManual) {
+          return {
+            monthlyKwh: Number(document.getElementById('electricity').value) || 0,
+            monthlyTherms: Number(document.getElementById('heating').value) || 0,
+            household: Number(document.getElementById('household-manual').value) || 1
+          };
+        }
+        var sqft = Number(document.getElementById('sqft').value) || 0;
+        var era = document.getElementById('home-era').value;
+        var heatType = document.getElementById('heat-type').value;
+        var rates = ERA_RATES[era] || ERA_RATES['1980_1999'];
+        var household = Number(document.getElementById('household').value) || 1;
+
+        var baseKwhPerMonth = (sqft * rates.kwhPerSqft) / 12;
+        var baseThermsPerMonth = (sqft * rates.thermsPerSqft) / 12;
+        var monthlyKwh = baseKwhPerMonth;
+        var monthlyTherms = baseThermsPerMonth;
+
+        if (heatType === 'electric') {
+          monthlyKwh = baseKwhPerMonth + (baseThermsPerMonth * THERM_TO_KWH);
+          monthlyTherms = 0;
+        } else if (heatType === 'heatpump') {
+          monthlyKwh = baseKwhPerMonth + (baseThermsPerMonth * THERM_TO_KWH / HEATPUMP_COP);
+          monthlyTherms = 0;
+        }
+
+        var estimateEl = document.getElementById('home-estimate');
+        if (estimateEl) {
+          var parts = '~' + Math.round(monthlyKwh) + ' kWh';
+          if (monthlyTherms > 0) parts += ' and ~' + Math.round(monthlyTherms) + ' therms';
+          parts += '/month for the whole home.';
+          estimateEl.textContent = 'Estimated ' + parts;
+        }
+
+        return { monthlyKwh: monthlyKwh, monthlyTherms: monthlyTherms, household: household };
+      }
+
+      // ——— Full footprint calculation ———
+      function computeFootprints() {
+        var he = getHomeEnergy();
+        var vehicleType = document.getElementById('vehicle-type').value;
+        var kgPerMile = VEHICLE_KG_PER_MILE[vehicleType] || VEHICLE_KG_PER_MILE.gas;
+        var dailyMiles = Number(document.getElementById('commute').value) || 0;
+        var hoursFlownPerYear = Number(document.getElementById('airtravel').value) || 0;
+        var dailyQueries = Number(document.getElementById('aiusage').value) || 0;
+
+        var electricity = (he.monthlyKwh * 12) * CONFIG.electricityKgPerKwh;
+        var naturalGas = (he.monthlyTherms * 12) * CONFIG.gasKgPerTherm;
+        var home = (electricity + naturalGas) / he.household;
+        var commuting = (dailyMiles * CONFIG.commuteDaysPerWeek * CONFIG.commuteWeeksPerYear) * kgPerMile;
+        var travel = hoursFlownPerYear * CONFIG.airTravelKgPerHour;
+        var aiTotal = (dailyQueries * CONFIG.daysPerYear) * CONFIG.aiKgPerQuery;
+        var lifestyleTotal = home + commuting + travel;
+        var total = lifestyleTotal + aiTotal;
+
+        return { home: home, commuting: commuting, travel: travel, aiTotal: aiTotal, lifestyleTotal: lifestyleTotal, total: total };
+      }
+
+      // ——— Chart + summary update ———
+      var chart = null;
+
+      function updateSummaryAndChart() {
+        var result = computeFootprints();
+        var total = result.total;
+        var aiPercent = total > 0 ? (result.aiTotal / total) * 100 : 0;
+        var x = Math.round(result.lifestyleTotal);
+        var y = Math.round(result.aiTotal);
+        var z = total > 0 ? aiPercent.toFixed(2) : '0.00';
+
+        var summaryEl = document.getElementById('results-summary');
+        if (summaryEl) {
+          summaryEl.textContent = 'Your lifestyle produces ' + x + ' kg of CO2 per year. Your AI usage produces ' + y + ' kg of CO2 per year. Your AI usage accounts for ' + z + '% of your total tracked carbon footprint.';
+        }
+
+        if (chart && chart.data && chart.data.datasets) {
+          chart.data.datasets[0].data = [result.home, AVG_ST_LOUIS.home];
+          chart.data.datasets[1].data = [result.commuting, AVG_ST_LOUIS.commuting];
+          chart.data.datasets[2].data = [result.travel, AVG_ST_LOUIS.travel];
+          chart.data.datasets[3].data = [result.aiTotal, AVG_ST_LOUIS.aiTotal];
+          chart.update('none');
+        }
+      }
+
+      // ——— Create chart ———
+      var canvas = document.getElementById('footprint-chart');
+      if (canvas) {
+        var init = computeFootprints();
+        chart = new Chart(canvas, {
+          type: 'bar',
+          data: {
+            labels: ['Your footprint', 'Average (St. Louis)'],
+            datasets: [
+              { label: 'Home', data: [init.home, AVG_ST_LOUIS.home], backgroundColor: 'rgba(59, 130, 246, 0.9)', borderColor: 'rgb(37, 99, 235)', borderWidth: 1, stack: 'total' },
+              { label: 'Commuting', data: [init.commuting, AVG_ST_LOUIS.commuting], backgroundColor: 'rgba(168, 85, 247, 0.9)', borderColor: 'rgb(126, 34, 206)', borderWidth: 1, stack: 'total' },
+              { label: 'Travel', data: [init.travel, AVG_ST_LOUIS.travel], backgroundColor: 'rgba(236, 72, 153, 0.9)', borderColor: 'rgb(190, 24, 93)', borderWidth: 1, stack: 'total' },
+              { label: 'AI usage', data: [init.aiTotal, AVG_ST_LOUIS.aiTotal], backgroundColor: 'rgba(34, 197, 94, 0.9)', borderColor: 'rgb(22, 163, 74)', borderWidth: 1, stack: 'total' }
+            ]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: true, position: 'top' },
+              tooltip: {
+                callbacks: {
+                  label: function (ctx) {
+                    return ctx.dataset.label + ': ' + Math.round(ctx.raw) + ' kg CO2/year';
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { stacked: true, beginAtZero: true, title: { display: true, text: 'kg CO2 per year' } },
+              y: { stacked: true }
+            }
+          }
+        });
+      }
+
+      // ——— Manual / Simple toggle ———
+      var manualToggle = document.getElementById('manual-toggle');
+      var homeSimple = document.getElementById('home-simple');
+      var homeManual = document.getElementById('home-manual');
+
+      manualToggle.addEventListener('change', function () {
+        if (manualToggle.checked) {
+          homeSimple.classList.add('hidden');
+          homeManual.classList.remove('hidden');
+        } else {
+          homeSimple.classList.remove('hidden');
+          homeManual.classList.add('hidden');
+        }
+        updateSummaryAndChart();
+      });
+
+      // ——— Wire all inputs ———
+      var sliderConfig = [
+        { id: 'sqft', valueId: 'sqft-value' },
+        { id: 'household', valueId: 'household-value' },
+        { id: 'electricity', valueId: 'electricity-value' },
+        { id: 'heating', valueId: 'heating-value' },
+        { id: 'household-manual', valueId: 'household-manual-value' },
+        { id: 'commute', valueId: 'commute-value' },
+        { id: 'airtravel', valueId: 'airtravel-value' },
+        { id: 'aiusage', valueId: 'aiusage-value' }
+      ];
+
+      sliderConfig.forEach(function (item) {
+        var input = document.getElementById(item.id);
+        var valueEl = document.getElementById(item.valueId);
+        if (!input || !valueEl) return;
+        input.addEventListener('input', function () {
+          valueEl.textContent = input.value;
+          updateSummaryAndChart();
+        });
+        valueEl.textContent = input.value;
+      });
+
+      ['home-era', 'heat-type', 'vehicle-type'].forEach(function (id) {
+        document.getElementById(id).addEventListener('change', function () {
+          updateSummaryAndChart();
+        });
+      });
+
+      updateSummaryAndChart();
+    })();
+  </script>
+</body>
+</html>
