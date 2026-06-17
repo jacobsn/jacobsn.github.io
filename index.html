@@ -77,6 +77,15 @@ rawtitle: true
 
     <div class="row mt-4">
       <div class="col-12">
+        <h2>In the News</h2>
+        <ul style="list-style: none; padding-left: 0;">
+          {% bibliography --template press-item --query @*[press] %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
         <h2>Selected Contributions</h2>
         <p class="mb-3" style="font-size: 0.95rem;">See <a href="{{site.laburl}}/publications/">my lab's page</a> for a complete listing of publications.</p>
         <div class="publications-sidebar">

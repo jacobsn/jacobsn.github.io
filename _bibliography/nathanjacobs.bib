@@ -1,37 +1,115 @@
+% Area Annotations
+% Each entry may include an "annotation" field with one or more of the following
+% comma-separated area tags that describe the research topic:
+%
+%   agriculture        - Crop monitoring, precision agriculture, and food security
+%   air_quality        - Air pollution, particulate matter, and atmospheric sensing
+%   astrophysics       - Astronomy, sky surveys, and astrophysical imaging
+%   audio              - Sound, acoustic sensing, and audio-visual learning
+%   calibration        - Camera calibration and sensor parameter estimation
+%   cameranetwork      - Networks of cameras, multi-camera systems, and webcam studies
+%   compressive        - Compressive sensing and sparse signal recovery
+%   ecology            - Biodiversity, species distribution, and environmental monitoring
+%   forestry           - Forest monitoring, tree mortality, and deforestation mapping
+%   generative         - Generative models, image synthesis, and diffusion models
+%   geoai              - GeoAI, spatial reasoning, and geographic information systems
+%   geohazards         - Natural hazard mapping including landslides, sinkholes, and fire impacts
+%   geometric          - 3D geometry, shape analysis, and geometric deep learning
+%   lidar              - LiDAR point clouds and depth sensing
+%   localization       - Geo-localization, place recognition, and geographic estimation
+%   medical            - Medical image analysis and clinical applications
+%   motion             - Motion estimation, optical flow, and video understanding
+%   remote_sensing     - Satellite and aerial imagery analysis
+%   representation_learning - Self-supervised and unsupervised feature learning
+%   rl                 - Reinforcement learning and interactive agents
+%   social_media       - Social media imagery and user-generated content
+%   surveillance       - Activity recognition, anomaly detection, and security video
+%   timelapse          - Long-term time-lapse imagery and temporal change
+%   transportation     - Autonomous driving, traffic analysis, and smart mobility
+%   uncertainty        - Uncertainty quantification and probabilistic methods
+%   urban              - Urban sensing, built environment, and city-scale geospatial analysis
+%   vlm                - Vision-language models and multimodal learning
+%   webcam             - Outdoor webcam networks and environmental monitoring
+
+@misc{qiao2026track2view,
+      annotation    = {generative},
+      title={Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks}, 
+      author={Feng Qiao and Zhaochong An and Zhexiao Xiong and Serge Belongie and Nathan Jacobs},
+      project={https://qjizhi.github.io/track2view/},
+      year={2026},
+      eprint={2606.15534},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.15534}, 
+}
+
+@misc{xiong2026actworld,
+      annotation    = {generative},
+      title={ActWorld: From Explorable to Interactive World Model via Action-Aware Memory},
+      author={Zhexiao Xiong and Yizhi Song and Hao Kang and Qing Yan and Liming Jiang and Jenson Yang and Zhoujie Fu and Stathi Fotiadis and Angtian Wang and Zichuan Liu and Bo Liu and Yiding Yang and Xin Lu and Nathan Jacobs},
+      year={2026},
+      eprint={2606.17730},
+      project={https://interactwm.github.io/ActWorld/},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.17730},
+}
+
+@misc{cui2026stereogenbench,
+      title={{StereoGenBench}: A Synthetic Multi-Camera Benchmark for Stereo Generation under Controlled Baseline Regimes},
+      annotation    = {generative,geometric},
+      author={Yangzhi Cui and Feng Qiao and Nathan Jacobs},
+      author+an     = {3=highlight},
+      month         = May,
+      year={2026},
+      eprint={2605.23237},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.23237},
+      thumbnail={/thumbnails/stereogenbench.png},
+}
+
 @misc{robinson2026global,
       title={The first global agricultural field boundary map at 10m resolution},
       annotation    = {remote_sensing,geoai,agriculture},
       author={Caleb Robinson and Gedeon Muhawenayo and Subash Khanal and Zhanpei Fang and Isaac Corley and Ana M. Tárano and Lyndon Estes and Jennifer Marcus and Nathan Jacobs and Hannah Kerner and Inbal Becker-Reshef and Juan M. Lavista Ferres},
+      month         = May,
       year={2026},
       eprint={2605.11055},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2605.11055},
+      pdf={https://mvrl.github.io/pdf/robinson2026global.pdf},
+      thumbnail={/thumbnails/global_field_boundaries.jpg},
+      press={https://engineering.washu.edu/news/2026/Boundaries-of-agricultural-fields-worldwide-now-publicly-available.html},
+      press_title={Boundaries of agricultural fields worldwide now publicly available},
 }
 
 @inproceedings{tao2026beyondflatlabels,
   spotlight     = {false},
-  annotation    = {ecology},
+  annotation    = {ecology,representation_learning},
   author        = {Tao, Zhiyuan and Sastry, Srikumar and Thompson, Matthew and Campolongo, Elizabeth and Zhang, Net and Zhang, Ziheng and Lapp, Hilmar and Su, Yu and Berger-Wolf, Tanya and Jacobs, Nathan and Chao, Wei-Lun and Gu, Jianyang},
   title         = {Beyond Flat Labels: Level-Restricted Contrastive Learning for Hierarchical Fine-Grained Vision Classification},
   booktitle     = {Fine-Grained Visual Categorization (FGVC) (IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshop)},
   author+an     = {10=highlight},
   month         = Jun,
-  year          = {2026}
+  year          = {2026},
+  thumbnail     = {/thumbnails/beyond_flat_labels_hierarchy.png}
 }
 
 @inproceedings{mosig2026deadtrees_egu,
+  annotation = {remote_sensing,geoai,forestry},
   author = {Mosig, Clemens and Kattenborn, Teja and Vanja-Jehle, Janusch and Montero, David and Brandt, John and Bozzini, Aurora and Cheng, Yan and Esquivel Muelbert, Adriane and Ganz, Keenan and Gora, Evan and Gr{\"u}ning, Bj{\"o}rn A. and Jacobs, Nathan and Hartmann, Henrik and Hempel, Jan and Horion, St{\'e}phanie and Junttila, Samuli and Khanal, Subash and Korznikov, Kirill and Kraemer, Guido and McGregor, Ian and M{\"o}nks, Milena and Muller-Landau, Helene and Nardi, Davide and Neumeier, Paul and Schmid, Jonathan and Schwartz, Martin and Beloui Schwenke, Mirela and Soltani, Salim and Therese-Schmehl, Marie and Veitch-Michaelis, Josh and Xing, Eric and Mahecha, Miguel D.},
   title = {deadtrees.earth Maps: Tree Mortality and Disturbance Mapping from Sentinel-2 Timeseries Across The Globe},
   booktitle = {EGU General Assembly 2026},
-  year = {2026},
   address = {Vienna, Austria},
   publisher = {Copernicus Meetings},
-  year = 2026,
+  year = {2026},
   month = 5,
-  day = 3, 
+  day = 3,
   doi = {10.5194/egusphere-egu26-18072},
-  url = {https://doi.org/10.5194/egusphere-egu26-18072}
+  url = {https://doi.org/10.5194/egusphere-egu26-18072},
+  thumbnail = {/thumbnails/deadtrees_earth_maps.svg}
 }
 
 @inproceedings{cher2026search,
@@ -39,6 +117,7 @@
   author        = {Daniel Cher and Pranavi Kolouju and Eric Xing and Robert Pless and Abby Stylianou and Nathan Jacobs},
   booktitle     = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
   title         = {Efficient hierarchical search for scalable retrieval in global remote sensing imagery},
+  thumbnail     = {/thumbnails/hierarchical_remote_sensing_retrieval.jpg},
   author+an     = {6=highlight},
   month         = Jul,
   note          = {(oral)},
@@ -46,10 +125,11 @@
 }
 
 @inproceedings{zhu2026sinkhole,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,geohazards},
   title      = {Attention-Enhanced Multimodal Fusion of Elevation and Aerial Imagery for Sinkhole Segmentation},
-  author     = {Junfeng Zhu and Desireé Cunningham and and Nathan Jacobs},
+  author     = {Junfeng Zhu and Desireé Cunningham and Nathan Jacobs},
   booktitle  = {Multidisciplinary Conference on Sinkholes and the Engineering and Environmental Impacts of Karst},
+  thumbnail  = {/thumbnails/sinkhole_segmentation_fusion.png},
   month      = Oct,
   year       = {2026}
 }
@@ -63,17 +143,20 @@
   doi = {10.36227/techrxiv.176287415.57044116/v1},
   URL = {https://www.techrxiv.org/doi/abs/10.36227/techrxiv.176287415.57044116/v1},
   eprint = {https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176287415.57044116/v1},
+  thumbnail = {/thumbnails/sar_to_optical_review.svg},
 }
 
 @misc{luo2026genopticalflow,
   annotation    = {generative,geometric},
   title={{GenOpticalFlow}: A Generative Approach to Unsupervised Optical Flow Learning},
   author={Yixuan Luo and Feng Qiao and Zhexiao Xiong and Yanjing Li and Nathan Jacobs},
+  month         = Mar,
   year={2026},
   eprint={2603.22270},
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2603.22270},
+  thumbnail     = {/thumbnails/genopticalflow.svg},
 }
 
 @misc{xiong2026physics,
@@ -89,16 +172,18 @@
   primaryclass  = {cs.CV},
   eprint        = {2603.13770},
   pdf           = {https://arxiv.org/pdf/2603.13770},
+  thumbnail     = {/thumbnails/physalign.svg},
   year          = {2026}
 }
 
 @article{koch2026,
-annotation = {remote_sensing,geoai},
+annotation = {remote_sensing,geoai,geohazards},
 title={Assessing deep learning segmentation models for mapping landslides from lidar-based elevation data},
 url={http://dx.doi.org/10.22541/essoar.177265426.62613754/v1},
 DOI={10.22541/essoar.177265426.62613754/v1},
 publisher={Wiley},
 author={Koch, Hudson J and Zhu, Junfeng and Bhatt, Shashank and Jacobs, Nathan and Dortch, Jason M},
+thumbnail={/thumbnails/landslide_segmentation_lidar.png},
 year={2026},
 month=mar }
 
@@ -106,6 +191,7 @@ month=mar }
   annotation    = {generative,remote_sensing,geoai},
       title={{GeoDiT}: Point-Conditioned Diffusion Transformer for Satellite Image Synthesis},
       author={Srikumar Sastry and Dan Cher and Brian Wei and Aayush Dhakal and Subash Khanal and Dev Gupta and Nathan Jacobs},
+      month         = Mar,
       year={2026},
       author+an     = {7=highlight},
       eprint={2603.02172},
@@ -113,28 +199,34 @@ month=mar }
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2603.02172},
       pdf={https://arxiv.org/pdf/2603.02172},
+      thumbnail = {/thumbnails/geodit_satellite_points.jpg},
 }
 
 @article{mosig2026subpixel,
-  annotation    = {remote_sensing,geoai,ecology},
+  annotation    = {remote_sensing,geoai,forestry},
   title        = {Sub-pixel mapping of disturbance and tree mortality dynamics from Sentinel-2 time series around the globe},
   author       = {Mosig, Clemens and Kattenborn, Teja and Montero Loaiza, David and Vanja-Jehle, Janusch and Brandt, John and Jacobs, Nathan and Khanal, Subash and Xing, Eric and Schwartz, Martin and Muller-Landau, Helene C. and Beloiu, Mirela and Bozzini, Aurora and Cheng, Yan and Ganz, Keenan and Gr{\"u}ning, Bj{\"o}rn and Hartmann, Henrik and Hempel, Jan and Horion, St{\'e}phanie and Junttila, Samuli and Korznikov, Kirill and Kraemer, Guido and M{\"o}nks, Milena and Nardi, Davide and Neumeier, Paul and Schmid, Jonathan and Soltani, Salim and Therese-Schmehl, Marie and Veitch-Michaelis, Josh and Mahecha, Miguel},
   journal      = {Eartharxiv},
   year         = {2026},
   url          = {https://eartharxiv.org/repository/view/11912/},
-  doi          = {10.31223/X5B18W}
+  doi          = {10.31223/X5B18W},
+  thumbnail    = {/thumbnails/subpixel_tree_mortality_dynamics.png}
 }
 
 @inproceedings{sastry2026prom3e,
-  annotation    = {remote_sensing,geoai,ecology,audio},
+  annotation    = {ecology,representation_learning,remote_sensing,audio},
   title         = {{ProM3E}: Probabilistic Masked MultiModal Embedding Model for Ecology},
   author        = {Srikumar Sastry and Subash Khanal and Aayush Dhakal and Jiayu Lin and Dan Cher and Phoenix Jarosz and Nathan Jacobs},
   author+an     = {7=highlight},
   project       = {https://vishu26.github.io/prom3e/},
+  press         = {https://engineering.washu.edu/news/2026/AI-model-looks-for-missing-pieces-to-puzzle.html},
+  press_title   = {AI model looks for missing pieces to puzzle},
   month         = Jun,
   year          = {2026},
   code          = {https://github.com/mvrl/proM3E},
   pdf           = {https://arxiv.org/pdf/2511.02946.pdf},
+  thumbnail     = {/thumbnails/prom3e.svg},
+  spotlight     = {true},
   booktitle     = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   eprint        = {2511.02946},
   archiveprefix = {arXiv},
@@ -142,7 +234,8 @@ month=mar }
 }
 
 @inproceedings{dhakal2026simlbr,
-  annotation    = {generative},
+  annotation    = {representation_learning,generative},
+  spotlight     = {true},
   title         = {{SimLBR}: Learning to Detect Fake Images by Learning to Detect Real Images},
   author        = {Aayush Dhakal and Subash Khanal and Srikumar Sastry and Jacob Arndt and Philipe Ambrozio Dias and Dalton Lunga and Nathan Jacobs},
   author+an     = {7=highlight},
@@ -151,6 +244,7 @@ month=mar }
   code          = {https://github.com/mvrl/SimLBR},
   booktitle     = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   eprint        = {2602.20412},
+  thumbnail     = {/thumbnails/simlbr.svg},
   pdf = {https://arxiv.org/pdf/2602.20412},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV}
@@ -159,12 +253,16 @@ month=mar }
 @inproceedings{prue2026,
   annotation    = {remote_sensing,geoai,agriculture},
   pdf           = {https://arxiv.org/pdf/2603.27101},
+  thumbnail     = {/thumbnails/prue_field_boundaries.png},
   title         = {{PRUE}: A Practical Recipe for Field Boundary Segmentation at Scale},
   author        = {Gedeon Muhawenayo and Caleb Robinson and Subash Khanal and Zhanpei Fang and Isaac Corley and Alexander Wollam and Tianyi Gao and Leonard Strnad and Ryan Avery and Lyndon Estes and Ana M. Tárano and Nathan Jacobs and Hannah Kerner},
   author+an     = {12=highlight},
   month         = Jun,
+  spotlight     = {true},
   year          = {2026},
   booktitle     = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  press         = {https://engineering.washu.edu/news/2026/Boundaries-of-agricultural-fields-worldwide-now-publicly-available.html},
+  press_title   = {Boundaries of agricultural fields worldwide now publicly available},
 }
 
 
@@ -211,12 +309,14 @@ annotation = {remote_sensing,geoai},
   note       = {(oral)},
   booktitle  = {International Conference on Autonomous Agents and Multiagent Systems (AAMAS)},
   author+an  = {4=highlight},
-  annotation = {rl,remote_sensing,geoai,generative}
+  annotation = {rl,remote_sensing,geoai,generative},
+  thumbnail  = {/thumbnails/diffvas.jpg}
 }
 
 @inproceedings{cher2026vector,
   spotlight     = {true},
-  annotation    = {generative,remote_sensing,geoai},
+  annotation    =
+  {generative,remote_sensing,geoai,representation_learning},
   author        = {Dan Cher and Brian Wei and Srikumar Sastry and Nathan Jacobs},
   title         = {{VectorSynth}: Fine-Grained Satellite Image Synthesis with Structured Semantics},
   booktitle     = {IEEE Winter Conference on Applications of Computer Vision (WACV)},
@@ -232,7 +332,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{klemmer_embeddings,
-  annotation    = {remote_sensing,geoai},
+  annotation    = {remote_sensing,geoai,representation_learning},
   title         = {{Earth Embeddings}: Towards {AI}-centric Representations of our Planet},
   author        = {Konstantin Klemmer and Esther Rolf and Marc Russwurm and Gustau Camps-Valls and Mikolaj Czerkawski and Stefano Ermon and Alistair Francis and Nathan Jacobs and Hannah Rae Kerner and Lester Mackey and Gengchen Mai and Oisin Mac Aodha and Markus Reichstein and Caleb Robinson and David Rolnick and Evan Shelhamer and Vincent Sitzmann and Devis Tuia and Xiaoxiang Zhu},
   author+an     = {8=highlight},
@@ -244,22 +344,22 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{elallaf2026,
-  annotation    = {remote_sensing,geoai,transportation},
+  annotation    = {remote_sensing,geoai,transportation,urban},
   title         = {Beta Distribution Learning for Reliable Roadway Crash Risk Assessment},
   author        = {Ahmad Elallaf and Nathan Jacobs and Xinyue Ye and Mei Chen and Gongbo Liang},
   year          = {2026},
   month         = Jan,
   booktitle     = {Association for the Advancement of Artificial Intelligence (AAAI)},
   author+an     = {2=highlight},
-  annotation    = {remote_sensing,geoai},
   eprint        = {2511.04886},
   pdf           = {https://arxiv.org/pdf/2511.04886.pdf},
+  thumbnail     = {/thumbnails/roadway_crash_risk_map.jpg},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV}
 }
 
 @inproceedings{badzioch2025,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,geohazards},
   title      = {Mapping Post-Fire Polygonal Ice Wedge Degradation in Arctic Tundra Using High Resolution Satellite Imagery and Computer Learning},
   author     = {Rachel Badzioch and Nathan Jacobs and Edward B Rastetter
                 and Adrian V Rocha},
@@ -274,10 +374,12 @@ annotation = {remote_sensing,geoai},
   title      = {Combining open labeled datasets with varying domains to improve large-scale agricultural field boundary delineation},
   booktitle  = {American Geophysical Union (AGU) Fall Meeting Abstracts},
   month      = Dec,
-  year       = {2025}
+  year       = {2025},
+  pdf        = {https://mvrl.github.io/pdf/balogun2025.pdf},
+  thumbnail = {/thumbnails/combining_open_labeled_datasets_with_varying_domai_thumb.jpg}
 }
 @inproceedings{shen2025,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,air_quality},
   title      = {Enhancing Estimation of Daily 1-km Resolution Fine Particulate Matter Concentrations for North America with Deep Learning from Geophysical A Priori Information},
   author     = { Siyuan Shen and Aaron van Donkelaar and Nathan Jacobs
     and Chi Li and Randall V. Martin },
@@ -409,7 +511,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{khanal2025sat2sound,
-  annotation    = {remote_sensing,generative,geoai},
+  annotation    = {remote_sensing,generative,geoai,urban},
   author        = {Subash Khanal and Srikumar Sastry and Aayush
                    Dhakal and Adeel Ahmad and Nathan Jacobs},
   title         = {{Sat2Sound}: A Unified Framework for Zero-Shot Soundscape Mapping},
@@ -419,6 +521,7 @@ annotation = {remote_sensing,geoai},
   month         = Jun,
   archiveprefix = {arXiv},
   eprint        = {2505.13777},
+  code          = {https://github.com/mvrl/sat2sound},
   pdf           = {https://arxiv.org/pdf/2505.13777.pdf},
   primaryclass  = {cs.CV}
 }
@@ -467,6 +570,7 @@ annotation = {remote_sensing,geoai},
 
 
 @article{favarao2025,
+  annotation = {urban,geoai},
   title    = {Applications of artificial intelligence in public health: analyzing the built environment and addressing spatial inequities},
   issn     = {1613-2238},
   doi      = {10.1007/s10389-025-02444-x},
@@ -498,7 +602,7 @@ annotation = {remote_sensing,geoai},
 
 @inproceedings{dhakal2025range,
   spotlight     = {true},
-  annotation    = {remote_sensing,geoai},
+  annotation    = {remote_sensing,geoai,representation_learning},
   author        = {Aayush Dhakal and Srikumar Sastry and Subash Khanal and Adeel Ahmad and Eric Xing and Nathan Jacobs},
   booktitle     = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   thumbnail     = {/thumbnails/range.jpg},
@@ -515,7 +619,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{sarkar2025aaai,
-  annotation    = {rl,remote_sensing,geoai},
+  annotation    = {rl,remote_sensing,geoai,urban},
   title         = {Active Geospatial Search for Efficient Tenant Eviction Outreach},
   author        = {Anindya Sarkar and Alex DiChristofano and Sanmay Das and Patrick Fowler and Nathan Jacobs and Yevgeniy Vorobeychik},
   year          = {2025},
@@ -531,7 +635,7 @@ annotation = {remote_sensing,geoai},
 
 @inproceedings{sastry2025taxa,
   spotlight     = {true},
-  annotation    = {remote_sensing,ecology,geoai},
+  annotation    = {remote_sensing,ecology,geoai,representation_learning},
   title         = {{TaxaBind}: A Unified Embedding Space for Ecological Applications},
   author        = {Srikumar Sastry and Subash Khanal and Aayush Dhakal and Adeel Ahmad and Nathan Jacobs},
   year          = {2025},
@@ -545,11 +649,13 @@ annotation = {remote_sensing,geoai},
   code          = {https://github.com/mvrl/TaxaBind},
   project       = {https://vishu26.github.io/taxabind},
   linkedin      = {https://www.linkedin.com/posts/jacobsn_im-excited-to-share-that-taxabind-a-unified-activity-7259230411728277504-HgXc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACWgMUBbrOLvty2wxK6klz29_SYYIMtEis},
-  pdf           = {https://openaccess.thecvf.com/content/WACV2025/papers/Sastry_TaxaBind_A_Unified_Embedding_Space_for_Ecological_Applications_WACV_2025_paper.pdf}
+  pdf           = {https://openaccess.thecvf.com/content/WACV2025/papers/Sastry_TaxaBind_A_Unified_Embedding_Space_for_Ecological_Applications_WACV_2025_paper.pdf},
+  press         = {https://engineering.washu.edu/news/2025/Multimodal-AI-tool-supports-ecological-applications.html},
+  press_title   = {Multimodal AI tool supports ecological applications},
 }
 
 @article{lin2024ic,
-  annotation    = {astrophysics},
+  annotation    = {astrophysics,representation_learning},
   author        = {Sheng-Chieh Lin and Yuanyuan Su and Fabio Gastaldello and Nathan Jacobs},
   author+an     = {4=highlight},
   journal       = {Astrophysical Journal},
@@ -577,7 +683,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{ShenEnhancingPM,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,air_quality},
   author     = {Siyuan Shen and Aaron van Donkelaar and Nathan Jacobs
     and Chi Li and Randall V. Martin},
   title      = {Enhancing Estimation of Fine Particulate Matter Species Concentrations over North America by Including Geophysical a priori Information in Deep Learning},
@@ -687,7 +793,7 @@ annotation = {remote_sensing,geoai},
 
 @inproceedings{khanal2024psm,
   spotlight     = {true},
-  annotation    = {audio,remote_sensing,social_media,geoai},
+  annotation    = {audio,remote_sensing,social_media,geoai,representation_learning,urban},
   author        = {Subash Khanal and Eric Xing and Srikumar Sastry and Aayush
                    Dhakal and Zhexiao Xiong and Adeel Ahmad and Nathan Jacobs},
   thumbnail     = {/thumbnails/psm.jpg},
@@ -707,11 +813,12 @@ annotation = {remote_sensing,geoai},
 }
 
 @article{levering2024scenicness,
-  annotation = {remote_sensing,geoai,vlm},
+  annotation = {remote_sensing,geoai,vlm,representation_learning},
   author     = {Alex Levering and Diego Marcos and Nathan Jacobs and Devis Tuia},
   journal    = {PLOS ONE},
   author+an  = {3=highlight},
   publisher  = {Public Library of Science},
+  month         = Sep,
   year       = 2024,
   title      = {Prompt-guided and multimodal landscape scenicness assessments with vision-language models}
 }
@@ -738,7 +845,7 @@ annotation = {remote_sensing,geoai},
 
 
 @inproceedings{dhakal2024bind,
-  annotation    = {remote_sensing,geoai},
+  annotation    = {remote_sensing,geoai,representation_learning},
   author        = {Aayush Dhakal and Subash Khanal and Srikumar Sastry and Adeel Ahmad and Nathan Jacobs},
   booktitle     = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
   title         = {{GeoBind}: Binding text, image, and audio through satellite images},
@@ -752,7 +859,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{jain2024align,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,representation_learning,urban},
   author     = {Pallavi Jain and Diego Marcos and Dino Ienco and Roberto Interdonato and Aayush Dhakal and Nathan Jacobs and Tristan Berchoux},
   booktitle  = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
   title      = {Aligning Geo-Tagged {CLIP} Representations and Satellite Imagery for Few-Shot Land Use Classification},
@@ -800,22 +907,21 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1021/acsestair.3c00054},
   linkedin   = {https://www.linkedin.com/posts/center-for-aerosol-science-and-engineering-case_enhancing-global-estimation-of-fine-particulate-activity-7223688781147594752-qL4P?utm_source=share&utm_medium=member_desktop/},
   author+an  = {4=highlight},
-  annotation = {remote_sensing,geoai}
+  annotation = {remote_sensing,geoai,air_quality}
 }
 
 @inproceedings{sarkar2024eviction,
-  annotation = {rl},
+  annotation = {rl,remote_sensing,geoai,urban},
   title      = {Geospatial Active Search for Preventing Evictions},
   author     = {Anindya Sarkar and Alex DiChristofano and Sanmay Das and Patrick Fowler and Nathan Jacobs and Yevgeniy Vorobeychik},
   year       = {2024},
   month      = May,
   booktitle  = {International Conference on Autonomous Agents and Multiagent Systems (AAMAS)},
-  author+an  = {5=highlight},
-  annotation = {remote_sensing,geoai}
+  author+an  = {5=highlight}
 }
 
 @article{liang2024road,
-  annotation = {remote_sensing,transportation,geoai},
+  annotation = {remote_sensing,transportation,geoai,representation_learning,urban},
   author     = {Gongbo Liang and Janet Zulu and Xin Xing and Nathan Jacobs},
   title      = {Unveiling Roadway Hazards: Enhancing Fatal Crash Risk Estimation through Multi-Scale Satellite Imagery and Self-Supervised Cross-Matching},
   journal    = {Journal of Selected Topics in Applied Earth Observations and Remote Sensing (JSTARS)},
@@ -841,7 +947,7 @@ annotation = {remote_sensing,geoai},
 
 @inproceedings{xing2023vlpl,
   title         = {Vision-Language Pseudo-Labels for Single-Positive Multi-Label Learning},
-  annotation    = {vlm},
+  annotation    = {vlm,representation_learning},
   author        = {Xin Xing and Zhexiao Xiong and Abby Stylianou and Srikumar Sastry and Liyu Gong and Nathan Jacobs},
   year          = {2024},
   month         = Jun,
@@ -880,13 +986,14 @@ annotation = {remote_sensing,geoai},
   thumbnail  = {/thumbnails/birdsat.jpg},
   linkedin   = {https://www.linkedin.com/feed/update/urn:li:activity:7125481632219754496/},
   press      = {https://engineering.wustl.edu/news/2024/For-the-birds.html},
+  press_title = {For the birds},
   year       = {2024},
   month      = Jan,
   pdf        = {http://arxiv.org/pdf/2310.19168.pdf},
   booktitle  = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   author+an  = {5=highlight},
   spotlight  = {true},
-  annotation = {remote_sensing,ecology}
+  annotation = {remote_sensing,ecology,representation_learning}
 }
 
 @inproceedings{greenwell2024watch,
@@ -928,6 +1035,7 @@ annotation = {remote_sensing,geoai},
   month      = Jan,
   booktitle  = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   press      = {https://engineering.wustl.edu/news/2024/Interactive-approach-to-geospatial-search-combines-aerial-imagery-reinforcement-learning.html},
+  press_title = {Interactive approach to geospatial search combines aerial imagery, reinforcement learning},
   code       = {https://github.com/anindyasarkarIITH/VAS},
   author+an  = {6=highlight},
   pdf        = {https://arxiv.org/pdf/2211.15788.pdf},
@@ -942,6 +1050,7 @@ annotation = {remote_sensing,geoai},
   month      = Dec,
   booktitle  = {Neural Information Processing Systems (NeurIPS)},
   press      = {https://engineering.wustl.edu/news/2023/Meta-learning-to-find-every-needle-in-a-haystack.html},
+  press_title = {Meta-learning to find every needle in a haystack},
   author+an  = {2=highlight},
   pdf        = {https://arxiv.org/pdf/2310.09689.pdf},
   code       = {https://github.com/anindyasarkarIITH/VAS},
@@ -961,13 +1070,14 @@ annotation = {remote_sensing,geoai},
   pdf        = {https://arxiv.org/pdf/2309.01842.pdf},
   linkedin   = {https://www.linkedin.com/posts/jacobsn_papers-with-code-stereoflowgan-co-training-activity-7110306042361610240-nn-0},
   press      = {https://engineering.wustl.edu/news/2023/Co-learning-to-improve-autonomous-driving.html},
+  press_title = {Co-learning to improve autonomous driving},
   annotation = {calibration,localization},
   eprint     = {2309.01842},
   archiveprefix = {arXiv}
 }
 
 @inproceedings{khanal2023soundscape,
-  annotation   = {audio,remote_sensing,social_media,representation_learning,geoai},
+  annotation   = {audio,remote_sensing,social_media,representation_learning,geoai,urban},
   title        = {Learning Tri-modal Embeddings for Zero-Shot Soundscape Mapping},
   code         = {https://github.com/mvrl/geoclap},
   author       = {Subash Khanal and Srikumar Sastry and Aayush Dhakal and Nathan Jacobs},
@@ -975,6 +1085,7 @@ annotation = {remote_sensing,geoai},
   month        = Nov,
   linkedin     = {https://www.linkedin.com/feed/update/urn:li:activity:7124749291079827456/},
   press        = {https://engineering.wustl.edu/news/2023/Mapping-soundscapes-everywhere.html},
+  press_title  = {Mapping soundscapes everywhere},
   booktitle    = {British Machine Vision Conference (BMVC)},
   pdf          = {https://arxiv.org/pdf/2309.10667.pdf},
   primaryclass = {cs.CV},
@@ -1017,11 +1128,12 @@ annotation = {remote_sensing,geoai},
 }
 
 @article{xing2023covid,
-  annotation     = {medical},
+  annotation     = {medical,representation_learning},
   author         = {Xing, Xin and Liang, Gongbo and Wang, Chris and Jacobs, Nathan and Lin, Ai-Ling},
   title          = {Self-Supervised Learning Application on COVID-19 Chest X-ray Image Classification Using Masked AutoEncoder},
   journal        = {Bioengineering},
   volume         = {10},
+  month         = Jul,
   year           = {2023},
   number         = {8},
   article-number = {901},
@@ -1049,11 +1161,12 @@ annotation = {remote_sensing,geoai},
   title      = {A Cost-sensitive Approach to Dimensionality Reduction for Multispectral Imagery},
   author+an  = {5=highlight},
   month      = Jul,
-  year       = {2023}
+  year       = {2023},
+  pdf        = {https://mvrl.github.io/pdf/brodie2023cost.pdf}
 }
 
 @inproceedings{sastry2023ssl,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,representation_learning},
   author     = {Srikumar Sastry and Aayush Dhakal and Benjamin Brodie and Subash
                 Khanal and Nathan Jacobs},
   booktitle  = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
@@ -1061,11 +1174,12 @@ annotation = {remote_sensing,geoai},
   note       = {(oral)},
   author+an  = {5=highlight},
   month      = Jul,
-  year       = {2023}
+  year       = {2023},
+  pdf        = {https://mvrl.github.io/pdf/sastry2023ssl.pdf}
 }
 
 @inproceedings{archbold2023fine,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,urban},
   author     = {Cohen Archbold and Benjamin Brodie and Aram Ansary Ogholbake and Nathan Jacobs},
   booktitle  = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
   title      = {Fine-grained Property Value Assessment Using Probabilistic Disaggregation},
@@ -1101,6 +1215,7 @@ annotation = {remote_sensing,geoai},
   title          = {Efficient Training on Alzheimer's Disease Diagnosis with Learnable Weighted Pooling for 3D PET Brain Image Classification},
   journal        = {Electronics},
   volume         = {12},
+  month         = Jul,
   year           = {2023},
   number         = {2},
   doi            = {10.3390/electronics12020467},
@@ -1143,6 +1258,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{xing2022bmvc,
+  annotation = {medical,representation_learning},
   author    = {Xin Xing and Chong Peng and Yu Zhang and Ai-Ling Lin and Nathan Jacobs},
   author+an = {5=highlight},
   title     = {{AssocFormer}: Association Transformer for Multi-label Classification},
@@ -1186,6 +1302,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{khanal2022catxplain,
+  annotation    = {medical,representation_learning},
   author        = {Subash Khanal and Benjamin Brodie and Xin Xing and Ai-Ling Lin and Nathan Jacobs},
   author+an     = {5=highlight},
   pdf           = {https://arxiv.org/pdf/2206.14841.pdf},
@@ -1252,7 +1369,8 @@ annotation = {remote_sensing,geoai},
   day        = {22},
   publisher  = {BioMed Central},
   author+an  = {5=highlight},
-  annotation = {medical}
+  annotation = {medical},
+  pdf        = {https://mvrl.github.io/pdf/liang2022development.pdf}
 }
 
 @inproceedings{xin2022advit,
@@ -1289,7 +1407,7 @@ annotation = {remote_sensing,geoai},
 
 @article{rafique2021sinkhole,
   funding    = {career},
-  annotation = {remote_sensing,lidar,geoai},
+  annotation = {remote_sensing,lidar,geoai,geohazards},
   author     = {Rafique, M. Usman and Zhu, Junfeng and Jacobs, Nathan},
   title      = {Automatic Segmentation of Sinkholes Using a Convolutional Neural Network},
   journal    = {Earth and Space Science},
@@ -1330,7 +1448,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @article{liang2021text,
-  annotation = {medical},
+  annotation = {medical,representation_learning},
   author     = {Gongbo Liang and Connor Greenwell and Yu Zhang and Xin Xing and Xiaoqin Wang and Ramakanth Kavuluru and Nathan Jacobs},
   journal    = {IEEE Journal of Biomedical and Health Informatics},
   title      = {Contrastive Cross-Modal Pre-Training: A General Strategy for Small Sample Medical Imaging},
@@ -1357,7 +1475,7 @@ annotation = {remote_sensing,geoai},
   title      = {Alzheimer's Disease Classification Using 2D Convolutional Neural Networks},
   author+an  = {7=highlight},
   doi        = {10.1109/EMBC46164.2021.9629587},
-  month      = 10,
+  month         = Jul,
   year       = {2021}
 }
 
@@ -1369,7 +1487,7 @@ annotation = {remote_sensing,geoai},
   title      = {Multi-Modal Data Analysis for {Alzheimer's} Disease Diagnosis: An Ensemble Model Using Imagery and Genetic Features},
   author+an  = {5=highlight},
   doi        = {10.1109/EMBC46164.2021.9630174},
-  month      = 10,
+  month         = Jul,
   year       = {2021}
 }
 
@@ -1389,7 +1507,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{brodie2021embed,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,representation_learning},
   author     = {Benjamin Brodie and Subash Khanal and Muhammad Usman Rafique and Connor Greenwell and Nathan Jacobs},
   booktitle  = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
   title      = {Hierarchical Probabilistic Embeddings for Multi-View Image Classification},
@@ -1445,7 +1563,7 @@ annotation = {remote_sensing,geoai},
   note       = {Acceptance rate: 28.47\%},
   doi        = {10.1109/ICPR48806.2021.9412498},
   year       = {2021},
-  month      = Jan
+  month         = Jan,
 }
 
 @inproceedings{chen2021safety,
@@ -1459,7 +1577,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{liang2020optical,
-  annotation = {astrophysics},
+  annotation = {astrophysics,representation_learning},
   funding    = {career},
   author     = {Gongbo Liang and Yuanyuan Su and Sheng-Chieh Lin and Yu Zhang and Yuanyuan Zhang and Nathan Jacobs},
   author+an  = {6=highlight},
@@ -1473,6 +1591,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{skyfinder,
+  annotation   = {webcam,remote_sensing},
   author       = {Paul Mihail and Scott Workman and Zach Bessinger and Nathan Jacobs},
   author+an    = {4=highlight},
   howpublished = {\url{https://mvrl.github.io/SkyFinder}},
@@ -1480,6 +1599,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{face2year,
+  annotation   = {social_media},
   author       = {Tawfiq Salem and Scott Workman and Menghua Zhai and Nathan Jacobs},
   author+an    = {4=highlight},
   howpublished = {\url{https://mvrl.github.io/Face2Year}},
@@ -1487,6 +1607,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{cvson,
+  annotation   = {localization,remote_sensing,social_media},
   author       = {Scott Workman and Nathan Jacobs},
   author+an    = {2=highlight},
   howpublished = {\url{https://mvrl.github.io/CVSoN}},
@@ -1494,6 +1615,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{cvt,
+  annotation   = {timelapse,localization,remote_sensing},
   author       = {Tawfiq Salem and Scott Workman and Menghua Zhai and Nathan Jacobs},
   author+an    = {4=highlight},
   howpublished = {\url{https://mvrl.github.io/CVT}},
@@ -1501,12 +1623,14 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{cvusa,
+  annotation   = {localization,remote_sensing,urban},
   author       = {Scott Workman and Nathan Jacobs},
   author+an    = {2=highlight},
   howpublished = {\url{https://mvrl.github.io/CVUSA}},
   title        = {{Crossview USA (CVUSA)}: A large dataset containing millions
                   of pairs of ground-level and aerial/satellite images from across
-                  the {United States}.}
+                  the {United States}.},
+  pdf          = {https://mvrl.github.io/pdf/cvusa.pdf}
 }
 
 @misc{bps,
@@ -1545,6 +1669,7 @@ annotation = {remote_sensing,geoai},
   title      = {Dynamic Image for 3D {MRI} Image {Alzheimer's} Disease Classification},
   code       = {https://github.com/mvrl/alzheimer-project},
   pdf        = {https://arxiv.org/pdf/2012.00119},
+  month         = Aug,
   year       = 2020,
   eprint     = {2012.00119},
   archiveprefix = {arXiv}
@@ -1588,10 +1713,12 @@ annotation = {remote_sensing,geoai},
   booktitle  = {ICML 2020 workshop on Uncertainty and Robustness in Deep Learning (UDL)},
   title      = {Neural Network Calibration for Medical Imaging Classification Using {DCA} Regularization},
   pdf        = {http://www.gatsby.ucl.ac.uk/~balaji/udl2020/accepted-papers/UDL2020-paper-137.pdf},
+  month         = Jul,
   year       = 2020
 }
 
 @misc{jacobs2020network,
+  annotation = {remote_sensing,geoai},
   title     = {Network Architecture for Generating a Labeled Overhead Image},
   author    = {Jacobs, Nathan and Workman, Scott},
   year      = {2020},
@@ -1619,7 +1746,7 @@ annotation = {remote_sensing,geoai},
 
 @article{zhu2020sinkhole,
   funding    = {career},
-  annotation = {remote_sensing,lidar},
+  annotation = {remote_sensing,lidar,geohazards},
   author     = {Junfeng Zhu and Adam Nolte and Nathan Jacobs and Ming Ye},
   journal    = {Journal of Hydrology},
   title      = {Machine Learning in Identifying Karst Sinkholes from {LiDAR}-Derived Topographic Depressions in the {Bluegrass} Region of {Kentucky}},
@@ -1640,12 +1767,14 @@ annotation = {remote_sensing,geoai},
   title      = {Surface Modeling for Airborne {LiDAR}},
   doi        = {10.1109/IGARSS39084.2020.9323522},
   note       = {(oral)},
-  year       = {2020}
+  month         = Jul,
+  year       = {2020},
+  thumbnail = {/thumbnails/surface_modeling_for_airborne_lidar_thumb.jpg}
 }
 
 @inproceedings{hadzic2020pop,
   funding    = {career},
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,urban},
   author     = {Armin Hadzic and Gordon Christie and Jeffrey Freeman and
                 Amber Dismer and Stevan Bullard and Ashley Greiner and Nathan
                 Jacobs and Ryan Mukherjee},
@@ -1654,7 +1783,7 @@ annotation = {remote_sensing,geoai},
   tweet      = {https://twitter.com/jacobsn/status/1278330759217139718},
   pdf        = {https://arxiv.org/pdf/2006.14547},
   doi        = {10.1109/IGARSS39084.2020.9324617},
-  month      = Sep,
+  month         = Jul,
   year       = {2020},
   eprint     = {2006.14547},
   archiveprefix = {arXiv}
@@ -1671,9 +1800,11 @@ annotation = {remote_sensing,geoai},
   tweet      = {https://twitter.com/jacobsn/status/1289301357019635712},
   pdf        = {https://mvrl.github.io/pdf/workman2020cloud.pdf},
   doi        = {10.1109/IGARSS39084.2020.9323759},
+  month         = Jul,
   year       = {2020},
   eprint     = {2007.15144},
-  archiveprefix = {arXiv}
+  archiveprefix = {arXiv},
+  thumbnail = {/thumbnails/single_image_cloud_detection_via_multi_image_fusio_thumb.jpg}
 }
 
 @inproceedings{liang2020weak,
@@ -1685,6 +1816,7 @@ annotation = {remote_sensing,geoai},
   title      = {Weakly-Supervised Self-Training for Breast Cancer Localization},
   doi        = {10.1109/EMBC44109.2020.9176617},
   pdf        = {https://mvrl.github.io/pdf/liang2020weak.pdf},
+  month         = Jul,
   year       = 2020
 }
 
@@ -1696,6 +1828,7 @@ annotation = {remote_sensing,geoai},
   pdf        = {http://openaccess.thecvf.com/content_CVPRW_2020/papers/w3/Blanton_Extending_Absolute_Pose_Regression_to_Multiple_Scenes_CVPRW_2020_paper.pdf},
   video      = {https://youtu.be/qb2h1zVizMY},
   doi        = {10.1109/CVPRW50498.2020.00027},
+  month         = Aug,
   year       = {2020},
   funding    = {career},
   annotation = {localization,calibration}
@@ -1707,13 +1840,14 @@ annotation = {remote_sensing,geoai},
   booktitle  = {IEEE/ISPRS Workshop: Large Scale Computer Vision for Remote Sensing (EARTHVISION)},
   title      = {{RasterNet}: Modeling Free-Flow Speed using LiDAR and Overhead Imagery},
   note       = {Acceptance rate: 26\%},
+  month         = Jun,
   year       = {2020},
   project    = {https://mvrl.github.io/RasterNet},
   doi        = {10.1109/CVPRW50498.2020.00112},
   video      = {https://www.youtube.com/watch?v=IWKQoV6fXSk},
   pdf        = {https://openaccess.thecvf.com/content_CVPRW_2020/papers/w11/Hadzic_RasterNet_Modeling_Free-Flow_Speed_Using_LiDAR_and_Overhead_Imagery_CVPRW_2020_paper.pdf},
   funding    = {career},
-  annotation = {remote_sensing,lidar,transportation,geoai}
+  annotation = {remote_sensing,lidar,transportation,geoai,urban}
 }
 
 @inproceedings{salem2020dynamic,
@@ -1721,6 +1855,7 @@ annotation = {remote_sensing,geoai},
   booktitle     = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   title         = {Learning a Dynamic Map of Visual Appearance},
   doi           = {10.1109/CVPR42600.2020.01245},
+  month         = Jun,
   year          = {2020},
   funding       = {career,google_crossview},
   annotation    = {localization,remote_sensing,timelapse,social_media,geoai},
@@ -1739,7 +1874,7 @@ annotation = {remote_sensing,geoai},
   doi           = {10.1109/CVPR42600.2020.01233},
   funding       = {career,google_crossview},
   spotlight     = {true},
-  annotation    = {remote_sensing,transportation,geoai},
+  annotation    = {remote_sensing,transportation,geoai,urban},
   author        = {Scott Workman and Nathan Jacobs},
   booktitle     = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   date-modified = {2020-03-31 16:54:51 -0400},
@@ -1747,6 +1882,7 @@ annotation = {remote_sensing,geoai},
   thumbnail     = {/thumbnails/dynamic_road.jpg},
   title         = {Dynamic Traffic Modeling from Overhead Imagery},
   tweet         = {https://twitter.com/jacobsn/status/1272916897542086658},
+  month         = Jun,
   year          = {2020},
   video         = {https://www.youtube.com/watch?v=CNe5EEdyptE},
   project       = {https://www.scottworkman.com/research/traffic/},
@@ -1768,7 +1904,7 @@ annotation = {remote_sensing,geoai},
 
 @article{maretto2020forest,
   spotlight  = {true},
-  annotation = {remote_sensing,ecology,geoai},
+  annotation = {remote_sensing,forestry,geoai},
   funding    = {career},
   author     = {Raian V. Maretto and Leila M. G. Fonseca and Nathan B. Jacobs and Thales S. K\"orting and Hugo N. Bendini and Leandro L. Parente},
   journal    = {IEEE Geoscience and Remote Sensing Letters},
@@ -1785,7 +1921,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{greenwell2019implicit,
-  annotation = {remote_sensing,social_media,geoai},
+  annotation = {remote_sensing,social_media,geoai,urban},
   funding    = {google_crossview,amazon,nvidia},
   dataset    = {cvusa},
   author     = {Connor Greenwell and Scott Workman and Nathan Jacobs},
@@ -1794,13 +1930,16 @@ annotation = {remote_sensing,geoai},
   note       = {(oral)},
   doi        = {10.1109/AIPR47015.2019.9174570},
   pdf        = {https://mvrl.github.io/pdf/greenwell2019implicit.pdf},
-  year       = 2019
+  month         = Oct,
+  year       = 2019,
+  thumbnail = {/thumbnails/implicit_land_use_mapping_using_social_media_image_thumb.jpg}
 }
 
 @inproceedings{zhang2019lidar,
   author        = {Yu Zhang and Gongbo Liang and Tawfiq Salem and Nathan Jacobs},
   booktitle     = {The Next Frontier of Big Data From LiDAR Workshop (co-located with IEEE Big Data)},
   title         = {{Defense-PointNet}: Protecting {PointNet} Against Adversarial Attacks},
+  month         = Jun,
   year          = {2019},
   pdf           = {https://arxiv.org/pdf/2002.11881},
   doi           = {10.1109/BigData47090.2019.9006307},
@@ -1817,11 +1956,12 @@ annotation = {remote_sensing,geoai},
   title      = {Phase-dependent importance of amyloid-beta,
                 phosphorylated-tau, and hypometabolism in determining mild
                 cognitive impairment and {Alzheimer's} disease: A machine learning study},
+  month         = Jul,
   year       = 2019
 }
 
 @article{hamraz2019deep,
-  annotation = {remote_sensing,lidar,ecology,geoai},
+  annotation = {remote_sensing,lidar,forestry,geoai},
   funding    = {career},
   author     = {Hamid Hamraz and Nathan B. Jacobs and Marco A. Contreras and Chase H. Clark},
   doi        = {10.1016/j.isprsjprs.2019.10.011},
@@ -1835,7 +1975,7 @@ annotation = {remote_sensing,geoai},
                 Airborne LiDAR 3D Point Clouds Representing Individual Trees}},
   volume     = {158},
   year       = {2019},
-  month      = dec,
+  month      = Oct,
   eprint     = {1802.08872},
   archiveprefix = {arXiv}
 }
@@ -1847,6 +1987,7 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1109/BIBM47256.2019.8983097},
   note       = {Acceptance rate: 18\% (oral)},
   pdf        = {https://arxiv.org/pdf/2002.12314},
+  month         = Nov,
   year       = {2019},
   annotation = {medical},
   eprint     = {2002.12314},
@@ -1861,6 +2002,7 @@ annotation = {remote_sensing,geoai},
   note       = {Acceptance rate: 18\% (oral)},
   title      = {Joint 2D-3D Breast Cancer Classification},
   pdf        = {https://arxiv.org/pdf/2002.12392},
+  month         = Nov,
   year       = {2019},
   eprint     = {2002.12392},
   archiveprefix = {arXiv}
@@ -1871,6 +2013,7 @@ annotation = {remote_sensing,geoai},
   booktitle  = {Conference on Machine Intelligence in Medical Imaging (CMIMI)},
   note       = {(oral)},
   title      = {Unsupervised Domain Adaptation for Mammogram Image Classification: A Promising Tool for Model Generalization},
+  month         = Nov,
   year       = {2019},
   annotation = {medical}
 }
@@ -1881,6 +2024,7 @@ annotation = {remote_sensing,geoai},
   booktitle  = {Radiological Society of North America ({RSNA})},
   note       = {(oral)},
   title      = {Training Deep Learning Models as Radiologists: Breast Cancer Classification Using Combined whole 2D Mammography and full volume Digital Breast Tomosynthesis},
+  month         = Nov,
   year       = 2019
 }
 
@@ -1888,13 +2032,15 @@ annotation = {remote_sensing,geoai},
   author     = {Junfeng Zhu and Adam M Nolte and Nathan Jacobs and Ming Ye},
   booktitle  = {Kentucky Water Resources Annual Symposium},
   title      = {Incorporating Machine Learning with {LiDAR} for Delineating Sinkholes},
+  month         = Mar,
   year       = {2019},
-  annotation = {remote_sensing,lidar,geoai},
-  funding    = {career}
+  annotation = {remote_sensing,lidar,geoai,geohazards},
+  funding    = {career},
+  pdf        = {https://mvrl.github.io/pdf/zhu2019lidar.pdf}
 }
 
 @inproceedings{salem2019anything,
-  annotation = {remote_sensing,social_media,geoai},
+  annotation = {remote_sensing,social_media,geoai,urban},
   dataset    = {cvusa},
   funding    = {career},
   author     = {Tawfiq Salem and Connor Greenwell and Hunter Blanton and Nathan Jacobs},
@@ -1903,11 +2049,12 @@ annotation = {remote_sensing,geoai},
   note       = {(oral)},
   pdf        = {https://arxiv.org/pdf/1909.06928},
   doi        = {10.1109/IGARSS.2019.8900646},
+  month         = Jul,
   year       = {2019}
 }
 
 @inproceedings{song2019speed,
-  annotation = {remote_sensing,transportation,geoai},
+  annotation = {remote_sensing,transportation,geoai,urban},
   funding    = {career},
   author     = {Weilian Song and Tawfiq Salem and Hunter Blanton and Nathan Jacobs},
   booktitle  = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
@@ -1917,24 +2064,27 @@ annotation = {remote_sensing,geoai},
   note       = {(oral)},
   doi        = {10.1109/IGARSS.2019.8900286},
   pdf        = {https://arxiv.org/pdf/1906.10104},
+  month         = Jul,
   year       = {2019},
   eprint     = {1906.10104},
   archiveprefix = {arXiv}
 }
 
 @inproceedings{rafique2019buildings,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,urban},
   funding    = {career},
   author     = {M. Usman Rafique and Nathan Jacobs},
   booktitle  = {IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
   title      = {Weakly Supervised Building Segmentation from Aerial Images},
   doi        = {10.1109/IGARSS.2019.8898812},
   pdf        = {https://mvrl.github.io/pdf/rafique2019buildings.pdf},
-  year       = {2019}
+  month         = Jul,
+  year       = {2019},
+  thumbnail = {/thumbnails/weakly_supervised_building_segmentation_from_aeria_thumb.jpg}
 }
 
 @inproceedings{rafique2019fusion,
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,urban},
   funding    = {career},
   author     = {M. Usman Rafique and Hunter Blanton and Nathan Jacobs},
   booktitle  = {IEEE/ISPRS Workshop: Large Scale Computer Vision for Remote Sensing (EARTHVISION)},
@@ -1943,6 +2093,7 @@ annotation = {remote_sensing,geoai},
   title      = {Weakly Supervised Fusion of Multiple Overhead Images},
   tweet      = {https://twitter.com/m_usmanrafique/status/1118352613752356864},
   doi        = {10.1109/CVPRW.2019.00189},
+  month         = Jun,
   year       = 2019
 }
 
@@ -1953,6 +2104,7 @@ annotation = {remote_sensing,geoai},
   thumbnail  = {/thumbnails/ganai.jpg},
   title      = {{GANai}: Standardizing {CT} Images using Generative Adversarial Network with Alternative Improvement},
   doi        = {10.1109/ICHI.2019.8904763},
+  month         = Jun,
   year       = 2019
 }
 
@@ -1978,6 +2130,7 @@ annotation = {remote_sensing,geoai},
   note       = {Impact factor: 2.814},
   title      = {Motion and Appearance based Background Subtraction for Freely Moving Cameras},
   doi        = {10.1016/j.image.2019.03.003},
+  month         = Jul,
   year       = 2019
 }
 
@@ -1986,6 +2139,7 @@ annotation = {remote_sensing,geoai},
   author     = {Gongbo Liang and Nathan Jacobs and Jinze Liu and Kyle Luo and Wendi Owen and Xiaoqin Wang},
   booktitle  = {SBI/ACR Breast Imaging Symposium},
   title      = {Translational relevance of performance of deep learning models on mammograms},
+  month         = Apr,
   year       = 2019
 }
 
@@ -2000,6 +2154,7 @@ annotation = {remote_sensing,geoai},
   title      = {A Generative Model of Worldwide Facial Appearance},
   note       = {(oral)},
   doi        = {10.1109/WACV.2019.00172},
+  month         = Jan,
   year       = 2019
 }
 
@@ -2008,7 +2163,9 @@ annotation = {remote_sensing,geoai},
   author     = {Gongbo Liang and Xiaoqin Wang and Nathan Jacobs},
   booktitle  = {SBI/ACR Breast Imaging Symposium},
   title      = {Evaluating the Publicly Available Mammography Datasets for Deep Learning Model Training},
-  year       = 2018
+  month         = Apr,
+  year       = 2018,
+  pdf        = {https://mvrl.github.io/pdf/liang2018mammo.pdf}
 }
 
 @inproceedings{mihail2018bones,
@@ -2019,12 +2176,13 @@ annotation = {remote_sensing,geoai},
   note       = {Acceptance rate: 19.6\%},
   thumbnail  = {/thumbnails/bone.jpg},
   title      = {Automatic Hand Skeletal Shape Estimation from Radiographs},
+  month         = Nov,
   year       = {2018}
 }
 
 @inproceedings{jacobs2018population,
   spotlight  = {true},
-  annotation = {remote_sensing,geoai},
+  annotation = {remote_sensing,geoai,urban},
   funding    = {career},
   author     = {Nathan Jacobs and Adam Kraft and M. Usman Rafique and Ranti Dev Sharma},
   note       = {Acceptance rate: 22.5\% (oral)},
@@ -2035,6 +2193,7 @@ annotation = {remote_sensing,geoai},
   thumbnail  = {/thumbnails/census.jpg},
   title      = {A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery},
   doi        = {10.1145/3274895.3274934},
+  month         = Nov,
   year       = 2018,
   eprint     = {1810.09528},
   archiveprefix = {arXiv}
@@ -2052,6 +2211,7 @@ annotation = {remote_sensing,geoai},
   thumbnail     = {/thumbnails/birdview.jpg},
   title         = {Learning to Look around Objects for Top-View Representations of Outdoor Scenes},
   doi           = {10.1007/978-3-030-01267-0_48},
+  month         = Sep,
   year          = {2018},
   eprint        = {1803.10870},
   archiveprefix = {arXiv}
@@ -2068,6 +2228,7 @@ annotation = {remote_sensing,geoai},
   pdf        = {https://arxiv.org/pdf/1909.07499},
   thumbnail  = {/thumbnails/when_where.jpg},
   title      = {Learning Geo-Temporal Image Features},
+  month         = Sep,
   year       = {2018}
 }
 
@@ -2083,7 +2244,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{greenwell2018objects,
-  annotation = {geoai,remote_sensing,social_media},
+  annotation = {geoai,remote_sensing,social_media,urban},
   dataset    = {cvusa},
   funding    = {career},
   author     = {Connor Greenwell and Scott Workman and Nathan Jacobs},
@@ -2092,13 +2253,14 @@ annotation = {remote_sensing,geoai},
   title      = {What Goes Where: Predicting Object Distributions from Above},
   pdf        = {https://arxiv.org/pdf/1808.00995},
   doi        = {10.1109/IGARSS.2018.8519251},
+  month         = Jul,
   year       = {2018},
   eprint     = {1808.00995},
   archiveprefix = {arXiv}
 }
 
 @inproceedings{salem2018soundscape,
-  annotation = {audio,remote_sensing,social_media,geoai},
+  annotation = {audio,remote_sensing,social_media,geoai,urban},
   funding    = {career},
   dataset    = {cvsound},
   data_cite  = {cvsound},
@@ -2109,11 +2271,12 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1109/IGARSS.2018.8517977},
   thumbnail  = {/thumbnails/audio_mapping.jpg},
   title      = {A Multimodal Approach to Mapping Soundscapes},
+  month         = Jul,
   year       = {2018}
 }
 
 @inproceedings{song2018farsa,
-  annotation    = {transportation,geoai},
+  annotation    = {transportation,geoai,urban},
   spotlight     = {true},
   funding       = {career},
   author        = {Weilian Song and Scott Workman and Armin Hadzic and Reginald Souleyrette and Eric Green and Mei Chen and Xu Zhang and Nathan Jacobs},
@@ -2124,6 +2287,7 @@ annotation = {remote_sensing,geoai},
   title         = {{FARSA}: Fully Automated Roadway Safety Assessment},
   tweet         = {https://twitter.com/multimodal_lab/status/1352267952154943488},
   doi           = {10.1109/WACV.2018.00063},
+  month         = Mar,
   year          = {2018},
   eprint        = {1901.06013},
   archiveprefix = {arXiv}
@@ -2134,6 +2298,7 @@ annotation = {remote_sensing,geoai},
   author     = {Derek Jones and Nathan Jacobs and Sally Ellingson},
   booktitle  = {ACM Richard Tapia Celebration of Diversity in Computing Conference},
   title      = {Learning Deep Feature Representations for Kinase Polypharmacology},
+  month         = Sep,
   year       = {2018}
 }
 
@@ -2142,6 +2307,7 @@ annotation = {remote_sensing,geoai},
   author     = {Derek Jones and Jeevith Bopaiah and Fatemah Alghamedy and Nathan Jacobs and Heidi Weiss and Wibe A De Jong and Sally Ellingson},
   booktitle  = {AMIA Informatics Summit},
   title      = {Polypharmacology Within the Full Kinome: a Machine Learning Approach},
+  month         = Mar,
   year       = {2018}
 }
 
@@ -2149,6 +2315,7 @@ annotation = {remote_sensing,geoai},
   author     = {Xiaofei Zhang and Yi Zhang and Erik Han and Nathan Jacobs and Qiong Han and Xiaoqin Wang and Jinze Liu},
   booktitle  = {IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
   title      = {Whole Mammogram Image Classification With Convolutional Neural Networks},
+  month         = Nov,
   year       = {2017},
   note       = {Acceptance rate: 19\%},
   doi        = {10.1109/BIBM.2017.8217738},
@@ -2156,7 +2323,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{vo2017revisit,
-  annotation = {localization,social_media,geoai},
+  annotation = {localization,social_media,geoai,urban},
   funding    = {career},
   author     = {Nam Vo and Nathan Jacobs and James Hays},
   booktitle  = {IEEE International Conference on Computer Vision (ICCV)},
@@ -2165,11 +2332,12 @@ annotation = {remote_sensing,geoai},
   title      = {Revisiting {IM2GPS} in the Deep Learning Era},
   note       = {Acceptance rate: 28.9\%},
   doi        = {10.1109/ICCV.2017.286},
+  month         = Oct,
   year       = {2017}
 }
 
 @inproceedings{workman2017nearremote,
-  annotation = {remote_sensing,social_media,geoai},
+  annotation = {remote_sensing,social_media,geoai,urban},
   spotlight  = {true},
   funding    = {career,google_crossview},
   dataset    = {brooklyn_and_queens},
@@ -2182,13 +2350,14 @@ annotation = {remote_sensing,geoai},
   title      = {A Unified Model for Near and Remote Sensing},
   note       = {Acceptance rate: 28.9\%},
   doi        = {10.1109/ICCV.2017.293},
+  month         = Oct,
   year       = {2017},
   eprint     = {1708.03035},
   archiveprefix = {arXiv}
 }
 
 @inproceedings{workman2017scenic,
-  annotation = {remote_sensing,social_media,geoai},
+  annotation = {remote_sensing,social_media,geoai,urban},
   spotlight  = {true},
   funding    = {career,google_crossview},
   author     = {Scott Workman and Richard Souvenir and Nathan Jacobs},
@@ -2199,6 +2368,7 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1109/ICCV.2017.596},
   note       = {Acceptance rate: 28.9\%},
   pdf        = {https://arxiv.org/pdf/1612.03142},
+  month         = Oct,
   year       = {2017},
   eprint     = {1612.03142},
   archiveprefix = {arXiv}
@@ -2209,11 +2379,12 @@ annotation = {remote_sensing,geoai},
   author     = {Weilian Song and Tawfiq Salem and Nathan Jacobs and Michael Johnson},
   booktitle  = {International Symposium on Acoustic Communication by Animals},
   title      = {Detecting the Presence of Bird Vocalizations in Audio Segments Using a Convolutional Neural Network Architecture},
+  month         = Aug,
   year       = 2017
 }
 
 @inproceedings{zhai2017layout,
-  annotation = {generative,localization,remote_sensing,geoai},
+  annotation = {generative,localization,remote_sensing,geoai,urban},
   dataset    = {cvusa},
   spotlight  = {true},
   funding    = {career,google_crossview,nvidia,amazon},
@@ -2226,10 +2397,12 @@ annotation = {remote_sensing,geoai},
   tweet      = {https://twitter.com/jacobsn/status/837012306814980097},
   thumbnail  = {/thumbnails/predict_layout.jpg},
   title      = {Predicting Ground-Level Scene Layout from Aerial Imagery},
+  month         = Jun,
   year       = {2017}
 }
 
 @misc{whitney2016method,
+  annotation = {localization},
   title   = {Method and System for Estimating Error in Predicted Distance
              Using {RSSI} Signature},
   author  = {Whitney, Julie Ann Gordon and Fessler, John Thomas and Kratzer, Zachary Charles Nathan and Jacobs, Nathan Bradley and Whitney, Ann Michelle and others},
@@ -2240,7 +2413,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{jacobs2016crossview,
-  annotation = {remote_sensing,social_media,geoai},
+  annotation = {remote_sensing,social_media,geoai,urban},
   funding    = {google_crossview,amazon,nvidia},
   author     = {Nathan Jacobs and Scott Workman and Menghua Zhai},
   booktitle  = {IEEE Applied Imagery and Pattern Recognition (AIPR)},
@@ -2248,11 +2421,12 @@ annotation = {remote_sensing,geoai},
   note       = {(oral)},
   pdf        = {https://mvrl.github.io/pdf/jacobs2016crossview.pdf},
   doi        = {10.1109/AIPR.2016.8010593},
+  month         = Oct,
   year       = 2016
 }
 
 @inproceedings{bessinger2016wgt,
-  annotation = {social_media},
+  annotation = {social_media,urban},
   funding    = {geolookbook,amazon,nvidia},
   dataset    = {wgt,geofaces},
   data_cite  = {wgt},
@@ -2261,6 +2435,7 @@ annotation = {remote_sensing,geoai},
   title      = {Who Goes There? {Approaches} to Mapping Facial Appearance Diversity},
   pdf        = {https://mvrl.github.io/pdf/bessinger2016wgt.pdf},
   doi        = {10.1145/2996913.2996997},
+  month         = Nov,
   year       = 2016
 }
 
@@ -2296,16 +2471,18 @@ annotation = {remote_sensing,geoai},
   author     = {Menghua Zhai and Scott Workman and Nathan Jacobs},
   booktitle  = {IEEE International Conference on Image Processing (ICIP)},
   title      = {Camera Geo-Calibration using an {MCMC} Approach},
+  month         = Sep,
   year       = {2016},
   annotation = {localization,calibration,geoai},
   funding    = {waldo},
   note       = {Acceptance rate: 45\%},
   doi        = {10.1109/ICIP.2016.7532905},
-  pdf        = {https://mvrl.github.io/pdf/zhai2016mcmc.pdf}
+  pdf        = {https://mvrl.github.io/pdf/zhai2016mcmc.pdf},
+  thumbnail = {/thumbnails/camera_geo_calibration_using_an_mcmc_approach_thumb.jpg}
 }
 
 @inproceedings{bessinger2016curbappeal,
-  annotation = {social_media},
+  annotation = {social_media,urban},
   funding    = {nvidia},
   author     = {Zachary Bessinger and Nathan Jacobs},
   booktitle  = {IEEE International Conference on Image Processing (ICIP)},
@@ -2314,6 +2491,7 @@ annotation = {remote_sensing,geoai},
   project    = {https://zachbessinger.com/publications/bessinger2016quantifying/},
   title      = {Quantifying Curb Appeal},
   doi        = {10.1109/ICIP.2016.7533189},
+  month         = Sep,
   year       = 2016
 }
 
@@ -2331,6 +2509,7 @@ annotation = {remote_sensing,geoai},
   project    = {/datasets/hlw/},
   thumbnail  = {/thumbnails/hlw.jpg},
   title      = {Horizon Lines in the Wild},
+  month         = Sep,
   year       = {2016},
   eprint     = {1604.02129},
   archiveprefix = {arXiv}
@@ -2349,6 +2528,7 @@ annotation = {remote_sensing,geoai},
   title      = {Detecting Vanishing Points using Global Image Context in a Non-{Manhattan} World},
   note       = {Acceptance rate: 29.9\%},
   doi        = {10.1109/CVPR.2016.610},
+  month         = Jun,
   year       = 2016,
   eprint     = {1608.05684},
   archiveprefix = {arXiv}
@@ -2367,6 +2547,7 @@ annotation = {remote_sensing,geoai},
   project    = {https://tsalem.github.io/audio-mapping/face2year/},
   title      = {Analyzing Human Appearance as a Cue for Dating Images},
   note       = {Acceptance rate: 42.3\%},
+  month         = Mar,
   year       = 2016
 }
 
@@ -2383,6 +2564,7 @@ annotation = {remote_sensing,geoai},
   project    = {https://mvrl.github.io/SkyFinder/},
   title      = {Sky Segmentation in the Wild: An Empirical Study},
   note       = {Acceptance rate: 42.3\%},
+  month         = Mar,
   year       = 2016
 }
 
@@ -2398,11 +2580,12 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1109/WACV.2016.7477713},
   title      = {A Fast Method for Estimating Transient Scene Properties},
   note       = {Acceptance rate: 42.3\%},
+  month         = Mar,
   year       = 2016
 }
 
 @inproceedings{workman2015localize,
-  annotation = {social_media,localization},
+  annotation = {social_media,localization,urban},
   spotlight  = {true},
   funding    = {nvidia,waldo},
   dataset    = {cvusa},
@@ -2417,6 +2600,7 @@ annotation = {remote_sensing,geoai},
   title      = {Wide-Area Image Geolocalization with Aerial Reference Imagery},
   doi        = {10.1109/ICCV.2015.451},
   note       = {Acceptance rate: 30.3\%},
+  month         = Oct,
   year       = 2015,
   eprint     = {1510.03743},
   archiveprefix = {arXiv}
@@ -2434,6 +2618,7 @@ annotation = {remote_sensing,geoai},
   thumbnail  = {/thumbnails/cloudmap.jpg},
   note       = {Acceptance rate: 30.3\%},
   title      = {Building Dynamic Cloud Maps from the Ground Up},
+  month         = Oct,
   year       = 2015
 }
 
@@ -2472,7 +2657,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{islam2015face2gps,
-  annotation = {localization,social_media},
+  annotation = {localization,social_media,urban},
   funding    = {contextualeyes},
   dataset    = {geofaces},
   author     = {Mohammad T. Islam and Scott Workman and Nathan Jacobs},
@@ -2483,7 +2668,9 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1109/ICIP.2015.7351072},
   title      = {{Face2GPS}: Estimating Geographic Location from Facial Features},
   pdf        = {https://mvrl.github.io/pdf/islam2015face2gps.pdf},
-  year       = 2015
+  month         = Sep,
+  year       = 2015,
+  thumbnail = {/thumbnails/face2gps_estimating_geographic_location_from_facia_thumb.jpg}
 }
 
 @inproceedings{workman2015deepfocal,
@@ -2497,11 +2684,12 @@ annotation = {remote_sensing,geoai},
   doi        = {10.1109/ICIP.2015.7351024},
   pdf        = {https://mvrl.github.io/pdf/workman2015deepfocal.pdf},
   title      = {{DeepFocal}: A Method for Direct Focal Length Estimation},
+  month         = Sep,
   year       = 2015
 }
 
 @inproceedings{workman2015geocnn,
-  annotation = {localization,calibration,social_media,geoai},
+  annotation = {localization,calibration,social_media,geoai,representation_learning},
   dataset    = {cvusa},
   funding    = {waldo},
   author     = {Scott Workman and Nathan Jacobs},
@@ -2511,6 +2699,7 @@ annotation = {remote_sensing,geoai},
   pdf        = {http://www.cv-foundation.org/openaccess/content_cvpr_workshops_2015/W13/papers/Workman_On_the_Location_2015_CVPR_paper.pdf},
   title      = {On the Location Dependence of Convolutional Neural Network Features},
   doi        = {10.1109/CVPRW.2015.7301385},
+  month         = Jun,
   year       = 2015
 }
 
@@ -2547,7 +2736,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{greenwell2014faceattributes,
-  annotation = {social_media},
+  annotation = {social_media,urban},
   funding    = {contextualeyes},
   dataset    = {geofaces},
   author     = {Connor Greenwell and Scott Spurlock and Richard Souvenir and Nathan Jacobs},
@@ -2556,6 +2745,7 @@ annotation = {remote_sensing,geoai},
   pages      = {32--37},
   pdf        = {https://mvrl.github.io/pdf/greenwell2014faceattributes.pdf},
   title      = {{GeoFaceExplorer}: Exploring the Geo-Dependence of Facial Attributes},
+  month         = Nov,
   year       = 2014
 }
 
@@ -2572,15 +2762,18 @@ annotation = {remote_sensing,geoai},
   pdf        = {https://mvrl.github.io/pdf/workman2014rainbow.pdf},
   thumbnail  = {/thumbnails/rainbow.jpg},
   title      = {{A Pot of Gold}: Rainbows as a Calibration Cue},
-  year       = 2014
+  month         = Sep,
+  year       = 2014,
 }
 
 @inproceedings{whitney2014rss,
   author    = {Ann Whitney and John Fessler and Johne Parker and Nathan Jacobs},
+    annotation = {localization},
   doi       = {10.1109/AIM.2014.6878242},
   booktitle = {IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)},
   pages     = {1183--1187},
   title     = {Received Signal Strength Indication Signature for Passive {UHF} Tags},
+  month         = Jul,
   year      = 2014
 }
 
@@ -2594,6 +2787,7 @@ annotation = {remote_sensing,geoai},
   pages      = {1807--1811},
   thumbnail  = {/thumbnails/mpca.jpg},
   title      = {{MPCA}: {EM}-Based {PCA} For Mixed-Size Image Datasets},
+  month         = Sep,
   year       = 2014
 }
 
@@ -2606,6 +2800,7 @@ annotation = {remote_sensing,geoai},
   note       = {Acceptance rate: 56.2\%},
   pages      = {1603--1608},
   title      = {Covariance-Based {PCA} for Multi-Size Data},
+  month         = Aug,
   year       = 2014,
   pdf        = {https://mvrl.github.io/pdf/zhai2014multisize.pdf}
 }
@@ -2615,6 +2810,7 @@ annotation = {remote_sensing,geoai},
   author     = {J. David Smith and Ryan Baltenberger and Scott Workman and Nathan Jacobs},
   booktitle  = {National Conference on Undergraduate Research (NCUR)},
   title      = {User-in-the-Loop Calibration and Mensuration},
+  month         = Mar,
   year       = 2014
 }
 
@@ -2629,6 +2825,7 @@ annotation = {remote_sensing,geoai},
   pages      = {1042--1049},
   pdf        = {https://mvrl.github.io/pdf/islam2014faces.pdf},
   title      = {Exploring the Geo-Dependence of Human Face Appearance},
+  month         = Mar,
   year       = 2014
 }
 
@@ -2642,6 +2839,7 @@ annotation = {remote_sensing,geoai},
   pages      = {409--416},
   pdf        = {https://mvrl.github.io/pdf/mihail2014skeleton.pdf},
   title      = {A {CRF} Approach to Fitting a Generalized Hand Skeleton Model},
+  month         = Mar,
   year       = 2014
 }
 
@@ -2658,12 +2856,15 @@ annotation = {remote_sensing,geoai},
   project    = {/research/clouds/index.html},
   thumbnail  = {/thumbnails/cloudmap_parse.jpg},
   title      = {Estimating Cloud Maps from Outdoor Image Sequences},
+  month         = Mar,
   year       = 2014
 }
 
 @article{abrams2013shadow,
+  annotation   = {geometric,calibration},
   title        = {Shadow Estimation Method for "The Episolar Constraint: Monocular Shape from Shadow Correspondence"},
   author       = {Austin Abrams and Chris Hawley and Kylia Miskell and Adina Stoica and Nathan Jacobs and Robert Pless},
+  month         = Apr,
   year         = {2013},
   pdf          = {https://arxiv.org/pdf/1304.4112},
   volume       = {preprint 1304.4112 [cs.CV]},
@@ -2683,6 +2884,7 @@ annotation = {remote_sensing,geoai},
   project    = {/research/clouds/index.html},
   thumbnail  = {/thumbnails/multiday_clouds.jpg},
   title      = {Scene Geometry from Several Partly Cloudy Days},
+  month         = Oct,
   year       = 2013
 }
 
@@ -2693,6 +2895,7 @@ annotation = {remote_sensing,geoai},
   note      = {Best Student Paper Award (runner-up)},
   pages     = {36--40},
   title     = {Teaching Graphics for Games using {Microsoft XNA}},
+  month         = Jul,
   year      = 2013
 }
 
@@ -2702,14 +2905,17 @@ annotation = {remote_sensing,geoai},
   booktitle  = {Kentucky GIS Conference},
   note       = {Best Student Presentation},
   title      = {Constructing a High-Resolution Mosaic of Kentucky Lake},
+  month         = Oct,
   year       = 2013
 }
 
 @inproceedings{zhou2013voeis,
+  annotation = {remote_sensing},
   author    = {Xuzi Zhou and Scott Workman and Mohammad T. Islam and Nathan Jacobs and James Griffioen},
   booktitle = {Symposium in the Mathematical, Statistical and Computer Sciences},
   note      = {Best Student Presentation},
   title     = {Cyber Infrastructure for the {VOEIS} Project},
+  month         = Jun,
   year      = 2013
 }
 
@@ -2723,6 +2929,7 @@ annotation = {remote_sensing,geoai},
   pages      = {1--7},
   pdf        = {https://mvrl.github.io/pdf/islam2013webcamweather.pdf},
   title      = {{Images+Weather}: Collection, Validation, and Refinement},
+  month         = Jun,
   year       = 2013
 }
 
@@ -2739,6 +2946,7 @@ annotation = {remote_sensing,geoai},
   pdf        = {https://mvrl.github.io/pdf/jacobs2013cloudcalibration.pdf},
   thumbnail  = {/thumbnails/streamlines.gif},
   title      = {Cloud Motion as a Calibration Cue},
+  month         = Jun,
   year       = 2013
 }
 
@@ -2773,6 +2981,7 @@ annotation = {remote_sensing,geoai},
   pages      = {214--221},
   pdf        = {https://www2.seas.gwu.edu/%7epless/papers/wacv2013Clouds.pdf},
   title      = {{Webcam2Satellite}: Estimating Cloud Maps from Webcam Imagery},
+  month         = Jan,
   year       = 2013
 }
 
@@ -2784,6 +2993,7 @@ annotation = {remote_sensing,geoai},
   pages      = {1--7},
   pdf        = {https://mvrl.github.io/pdf/mihail2012kinect.pdf},
   title      = {Real Time Gesture Recognition With 2 {Kinect} Sensors},
+  month         = Feb,
   year       = {2012}
 }
 
@@ -2792,6 +3002,7 @@ annotation = {remote_sensing,geoai},
   author     = {Scott Workman and James Knochelmann and Nathan Jacobs and David S. White and Richard Hauer},
   booktitle  = {Kentucky EPSCoR Conference},
   title      = {Registration and Visualization of Scientific Aerial Imagery at {Kentucky Lake}},
+  month         = Oct,
   year       = 2012
 }
 
@@ -2800,6 +3011,7 @@ annotation = {remote_sensing,geoai},
   author     = {Ethan Welty and Tad Pfeffer and Shad O'Neel and Nathan Jacobs},
   booktitle  = {Workshop on the Dynamics and Mass Budget of Arctic Glaciers},
   title      = {Calving Dynamics of the {Columbia Glacier, AK} (2000-2011 Update)},
+  month         = Aug,
   year       = 2012
 }
 
@@ -2819,14 +3031,17 @@ annotation = {remote_sensing,geoai},
   pubtype    = {oral presentation},
   thumbnail  = {/thumbnails/lost.jpg},
   title      = {{LOST}: Longterm Observation of Scenes (with Tracks)},
+  month         = Jan,
   year       = 2012
 }
 
 @inproceedings{wang2011ky,
+  annotation = {remote_sensing},
   funding   = {voeis},
   author    = {Peishing Wang and Siddhartha Bhattacharyya and David White and Nathan Jacobs},
   booktitle = {Kentucky EPSCoR Conference},
   title     = {Visualization of {Kentucky Lake}},
+  month         = Oct,
   year      = 2011
 }
 
@@ -2835,6 +3050,7 @@ annotation = {remote_sensing,geoai},
   author     = {Tom Milliman and Koen Hufkins and Isaac Lavine and Nathan Jacobs and Robert Pless and Andrew Richardson and Steve Frolking},
   booktitle  = {American Geophysical Union Annual Meeting},
   title      = {{The PhenoCam Website}: Adventures in ``Crowd-Sourcing'' Data Collection, Distribution and Analysis},
+  month         = Dec,
   year       = 2011
 }
 
@@ -2849,6 +3065,7 @@ annotation = {remote_sensing,geoai},
   thumbnail  = {/thumbnails/flow.gif},
   video      = {https://www.youtube.com/watch?v=6AKbJYpY23o},
   title      = {On Analyzing Video with Very Small Motions},
+  month         = Jun,
   year       = 2011
 }
 
@@ -2864,6 +3081,7 @@ annotation = {remote_sensing,geoai},
   pubtype    = {oral presentation},
   title      = {Webcam Geo-localization using Aggregate Light Levels},
   note       = {(oral)},
+  month         = Jan,
   year       = 2011
 }
 
@@ -2872,6 +3090,7 @@ annotation = {remote_sensing,geoai},
   booktitle  = {International Conference on Computing for Geospatial Research and Applications (COM.GEO)},
   title      = {Participatory Integration of Live Webcams into {GIS}},
   note       = {(oral)},
+  month         = Jul,
   year       = {2010},
   pages      = {1--8},
   abstract   = {Global satellite imagery provides nearly ubiquitous views
@@ -2980,7 +3199,7 @@ annotation = {remote_sensing,geoai},
                    increase the data available for studying particular problems in
                    phenology.},
   dataset       = {amos},
-  annotation    = {webcam,timelapse,cameranetwork,calibration,social_media},
+  annotation    = {webcam,timelapse,cameranetwork,calibration,social_media,urban},
   spotlight     = {true},
   data_cite     = {amos},
   date-modified = {2020-03-31 16:58:07 -0400},
@@ -2991,18 +3210,19 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{pless2009trackingAIPR,
-  annotation    = {surveillance,timelapse,motion,cameranetwork},
+  annotation    = {surveillance,timelapse,motion,cameranetwork,urban},
   author        = {Robert Pless and Nathan Jacobs and Michael Dixon and Ralph Hartley and Patrick Baker and Derek Brock and Nick Cassimatis and Dennis Perzanowski},
   booktitle     = {IEEE Applied Imagery and Pattern Recognition (AIPR)},
   date-modified = {2020-03-31 16:55:59 -0400},
   doi           = {10.1109/AIPR.2009.5466307},
   pubtype       = {oral presentation},
   title         = {{Persistence and Tracking}: Putting Vehicles and Trajectories in Context},
+  month         = Oct,
   year          = 2009
 }
 
 @inproceedings{jacobs2009webcamAIPR,
-  annotation    = {webcam,timelapse,cameranetwork,calibration},
+  annotation    = {webcam,timelapse,cameranetwork,calibration,urban},
   author        = {Nathan Jacobs and Richard Souvenir and Robert Pless},
   booktitle     = {IEEE Applied Imagery and Pattern Recognition (AIPR)},
   date-modified = {2020-03-31 16:56:03 -0400},
@@ -3011,6 +3231,7 @@ annotation = {remote_sensing,geoai},
   pages         = {1--8},
   pubtype       = {oral presentation},
   title         = {{Passive Vision}: The Global Webcam Imaging Network},
+  month         = Oct,
   year          = 2009
 }
 
@@ -3029,7 +3250,7 @@ annotation = {remote_sensing,geoai},
                 quantitative results comparing tracking results to
                 ground-truthed data, including thousands of vehicles from the
                 NGSIM Peachtree data set.},
-  annotation = {surveillance,motion},
+  annotation = {surveillance,motion,urban},
   author     = {Nathan Jacobs and Michael Dixon and Scott Satkin and Robert Pless},
   booktitle  = {IEEE ICCV Workshop on Visual Surveillance},
   doi        = {10.1109/ICCVW.2009.5457477},
@@ -3040,11 +3261,11 @@ annotation = {remote_sensing,geoai},
 }
 
 @inproceedings{jacobs2009phdforum,
-  annotation = {webcam,timelapse,cameranetwork,calibration},
+  annotation = {webcam,timelapse,cameranetwork,calibration,urban},
   author     = {Nathan Jacobs and Robert Pless},
   booktitle  = {ACM/IEEE International Conference on Distributed Smart Cameras (ICDSC)},
   doi        = {10.1109/ICDSC.2009.5289404},
-  month      = Sep,
+  month         = Oct,
   note       = {Winner PhD Forum Prize},
   pages      = {1--2},
   pubtype    = {oral presentation},
@@ -3067,11 +3288,11 @@ annotation = {remote_sensing,geoai},
                 prototype system, we offer results and examples from a dense
                 urban traffic camera network tracking, querying data with
                 thousands of vehicles over 30 minutes.},
-  annotation = {surveillance,cameranetwork},
+  annotation = {surveillance,cameranetwork,urban},
   author     = {Michael Dixon and Nathan Jacobs and Robert Pless},
   booktitle  = {ACM/IEEE International Conference on Distributed Smart Cameras (ICDSC)},
   doi        = {10.1109/ICDSC.2009.5289383},
-  month      = Sep,
+  month         = Oct,
   pages      = {1--8},
   pdf        = {https://mvrl.github.io/pdf/dixon2009multicam.pdf},
   title      = {An Efficient System for Vehicle Tracking in Multi-Camera Networks},
@@ -3118,7 +3339,7 @@ annotation = {remote_sensing,geoai},
                 proof-of-concept algorithms showing how this data conditioning
                 supports several problems in inferring properties of the scene
                 from image data.},
-  annotation = {webcam,cameranetwork,timelapse,calibration},
+  annotation = {webcam,cameranetwork,timelapse,calibration,urban},
   author     = {Nathan Jacobs and Walker Burgin and Richard Speyer and David Ross and Robert Pless},
   booktitle  = {IEEE CVPR Workshop on Internet Vision},
   doi        = {10.1109/CVPRW.2009.5204185},
@@ -3156,7 +3377,8 @@ annotation = {remote_sensing,geoai},
                 single image, and a tool to directly report how long the object
                 has been present in a scene without re-examining any video data.},
   annotation = {surveillance,timelapse,motion},
-  doi        = {10.1109/TCSVT.2008.928215}
+  doi        = {10.1109/TCSVT.2008.928215},
+  pdf        = {https://mvrl.github.io/pdf/jacobs2008timescales.pdf}
 }
 
 @inproceedings{jacobs2008transition,
@@ -3340,6 +3562,7 @@ annotation = {remote_sensing,geoai},
   author    = {Anderson, Terry and Hussam, Ali and Plummer, Bill and Jacobs, Nathan},
   booktitle = {International Conference on Asian Digital Libraries (ICADL)},
   title     = {Pie Charts for Visualizing Query Term Frequency in Search Results},
+  month         = Dec,
   year      = {2002},
   abstract  = {Search engine queries are normally brief but often return
                unmanageably long results, with which users struggle to determine
@@ -3370,6 +3593,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{timelapseclouds,
+  annotation   = {webcam,timelapse,calibration},
   author       = {Nathan Jacobs},
   author+an    = {1=highlight},
   howpublished = {\url{http://mvrl.cse.wustl.edu/datasets/timelapse_clouds}},
@@ -3377,6 +3601,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{hlw,
+  annotation   = {geometric,localization},
   author       = {Scott Workman and Menghua Zhai and Nathan Jacobs},
   author+an    = {3=highlight},
   howpublished = {\url{http://mvrl.github.io/HLW}},
@@ -3384,6 +3609,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{geofaces,
+  annotation   = {social_media,localization},
   author       = {Mohammad T. Islam and Connor Greenwell and Nathan Jacobs},
   author+an    = {3=highlight},
   howpublished = {\url{http://mvrl.github.io/GeoFaces}},
@@ -3391,6 +3617,7 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{lost,
+  annotation   = {surveillance,cameranetwork,timelapse},
   author       = {Austin Abrams and Jim Tucek and Joshua Little and Nathan Jacobs and Robert Pless},
   author+an    = {4=highlight},
   howpublished = {\url{http://mvrl.github.io/LOST}},
@@ -3398,9 +3625,9 @@ annotation = {remote_sensing,geoai},
 }
 
 @misc{amos,
+  annotation   = {webcam,cameranetwork,timelapse},
   author       = {Nathan Jacobs and Robert Pless and Austin Abrams and many others (see website for details)},
   author+an    = {1=highlight},
   howpublished = {\url{https://mvrl.github.io/AMOS}},
   title        = {{AMOS}: The Archive of Many Outdoor Scenes}
 }
-
