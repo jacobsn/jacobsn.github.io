@@ -1,0 +1,4 @@
+<li style="margin-bottom: 0.4rem;">
+  <span style="color: #888; font-size: 0.85rem; margin-right: 0.5rem;">{{ entry.month | slice: 0, 3 }} {{ entry.year }}</span>
+  <a href="{{ entry.press }}" target="_blank" rel="noopener">{% if entry.press_title %}{{ entry.press_title }}{% else %}{{ entry.title | remove: '{' | remove: '}' | truncatewords: 8 }}{% endif %}</a>
+</li>
