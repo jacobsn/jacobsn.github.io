@@ -1,33 +1,154 @@
-<div class="container">
-  <div class="row">
-    <div class="col-3">
-    {% if entry.thumbnail %}
-<img width="100%" loading="lazy" alt="a thumbnail for {{ entry.title }}" src="{{ site.laburl}}{{ entry.thumbnail }}"/>
-    {% else %}
-      <img width="100%" loading="lazy" alt="" height="1" src="/images/clear.png"/>
-    {% endif %}
+{% comment %}
+Extract and clean topics from the annotation field.
+Consolidates mapping logic to avoid redundancy.
+{% endcomment %}
+{% assign raw_annotations = entry.annotation | split: ',' %}
+{% assign primary_icon = "bi-journal-text" %}
+
+{% assign is_spotlight = %}
+
+{% if entry.spotlight == 'true' %}
+{% assign is_spotlight = true %}
+{% else %}
+{% assign is_spotlight = false %}
+{% endif %}
+
+{% assign topic_badges_html = "" %}
+
+{% for ann in raw_annotations %}
+{% assign t = ann | strip %}
+{% if t == "" or t == nil %}{% continue %}{% endif %}
+
+{% comment %} Map to icons and labels from _areas collection {% endcomment %}
+{% comment %} Map tag aliases to bibkeys {% endcomment %}
+{% assign area_bibkey = t %}
+
+{% comment %} Find matching area in collection {% endcomment %}
+{% assign area_found = false %}
+{% assign area_visible = false %}
+{% assign label = t | capitalize %}
+{% assign icon = 'bi-journal-text' %}
+{% for area in site.areas %}
+  {% assign area_file_bibkey = area.name | remove: '.html' %}
+  {% if area_file_bibkey == area_bibkey %}
+    {% if area.label %}{% assign label = area.label %}{% endif %}
+    {% if area.icon %}{% assign icon = area.icon %}{% endif %}
+    {% if area.visible == true %}{% assign area_visible = true %}{% endif %}
+    {% assign area_found = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Only show visible areas {% endcomment %}
+{% if area_visible %}
+  {% comment %} First valid topic becomes the primary icon {% endcomment %}
+  {% if topic_badges_html == "" %}
+  {% assign primary_icon = icon %}
+  {% endif %}
+
+  {% capture badge %}
+  <a href="/research/{{ area_bibkey }}/" class="badge bg-secondary-subtle text-secondary border p-2 d-inline-flex align-items-center text-decoration-none">
+    <i class="bi {{ icon }} me-1"></i> {{ label }}
+  </a>
+  {% endcapture %}
+  {% assign topic_badges_html = topic_badges_html | append: badge %}
+{% endif %}
+
+{% endfor %}
+
+<div class="row g-0 bib-item {% if entry.code %}has-code{% endif %}" data-year="{{ entry.year }}">
+  <div class="col-md-3 pe-md-4 mb-3 mb-md-0 position-relative">
+    {% if is_spotlight %}
+    <div class="position-absolute" style="z-index: 10; top: 0px; left: 0px;">
+      <span class="d-flex align-items-center justify-content-center p-2" title="Spotlight Presentation">
+        <i class="bi bi-star-fill text-warning drop-shadow"
+          style="font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);"></i>
+      </span>
     </div>
-    <div class="col-9">
-      {{reference}}
-      <br/>
+    {% endif %}
 
-<a class="label label-default" data-bs-toggle="modal" data-bs-target="#{{key}}-bibtex" href="#">bibtex</a>
+    {% if entry.thumbnail %}
+<img loading="lazy" alt="Thumbnail for {{ entry.title }}" src="{{ site.laburl }}{{ entry.thumbnail }}"
+      class="img-fluid rounded shadow-sm border w-100 bib-thumbnail" />
+    {% else %}
+    <div
+      class="rounded shadow-sm border bg-light d-flex align-items-center justify-content-center w-100 placeholder-icon-box"
+      style="height: 120px;">
+      <i class="bi {{ primary_icon }} text-muted opacity-75" style="font-size: 3rem;"></i>
+    </div>
+    {% endif %}
+  </div>
 
-{% include bib-links.html %}
+  <div class="col-md-9">
+    <div class="bib-reference-text mb-2">
+      {{ reference }}
+    </div>
 
-      <div class="modal" id="{{key}}-bibtex" tabindex="-1" role="dialog" aria-labelledby="{{key}} bibtex" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a class="label label-default" data-bs-dismiss="modal" href="#">close</a> &nbsp;
-            </div>
-            <div class="modal-body">
-              <pre>{{entry.bibtex}}</pre>
-            </div>
+    <div class="bib-links d-flex flex-wrap gap-2 align-items-center">
+      {% comment %} Technical links first {% endcomment %}
+      {% if entry.code %}
+      <a href="{{ entry.code }}"
+        class="badge bg-danger text-white p-2 text-decoration-none d-inline-flex align-items-center"
+        style="background-color: #a51419 !important;"><i class="bi bi-github me-1"></i> code</a>
+      {% endif %}
+
+      {% if entry.project %}
+      <a href="{{ entry.project }}"
+        class="badge bg-light text-dark border p-2 text-decoration-none d-inline-flex align-items-center">
+        <i class="bi bi-globe me-1"></i> website</a>
+      {% endif %}
+
+      {% if entry.pdf %}
+      <a href="{{ entry.pdf }}"
+        class="badge bg-light text-dark border p-2 text-decoration-none d-inline-flex align-items-center">
+        <i class="bi bi-file-earmark-pdf me-1"></i> paper</a>
+      {% endif %}
+
+      {% if entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}"
+        class="badge bg-light text-dark border p-2 text-decoration-none d-inline-flex align-items-center">doi</a>
+      {% endif %}
+
+      {% if entry.press %}
+      <a href="{{ entry.press }}" target="_blank" rel="noopener"
+        class="badge bg-light text-dark border p-2 text-decoration-none d-inline-flex align-items-center">
+        <i class="bi bi-newspaper me-1"></i> press</a>
+      {% endif %}
+
+      <a href="#" class="badge bg-light text-dark border p-2 text-decoration-none d-inline-flex align-items-center"
+        data-bs-toggle="modal" data-bs-target="#{{key}}-bibtex">bibtex</a>
+
+      {% comment %} Research Area badges (pre-rendered) {% endcomment %}
+      {{ topic_badges_html }}
+
+{% comment %}
+{% if is_spotlight %}
+      <span
+        class="badge bg-warning-subtle text-warning-emphasis border border-warning p-2 d-inline-flex align-items-center">
+        <i class="bi bi-star-fill me-1"></i> Spotlight
+      </span>}
+      {% endif %}
+{% endcomment %}
+
+    </div>
+
+    <!-- Modal for BibTeX -->
+    <div class="modal fade" id="{{key}}-bibtex" tabindex="-1" aria-labelledby="{{key}}ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content text-start">
+          <div class="modal-header">
+            <h5 class="modal-title" id="{{key}}ModalLabel">Bibliography Entry</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <pre class="bg-light p-3 rounded border small mb-0">{{ entry.bibtex | replace_regex:
+  '\s*(spotlight|thumbnail|linkedin|author\+an|annotation|dataset|funding)\s*=.*', '' }}</pre>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
