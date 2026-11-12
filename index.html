@@ -170,14 +170,25 @@ rawtitle: true
 
   </div>
   <script>
-    // Analytics: record clicks on the email link and the profile links in the header.
+    // Analytics: record clicks on the email link, the profile links in the header,
+    // and the paper/code/website/doi/bibtex links on each publication.
     document.addEventListener("click", function (e) {
       var a = e.target.closest("a");
       if (!a || typeof gtag !== "function") return;
+      var item = a.closest(".bib-item");
       if (a.href.indexOf("mailto:") === 0) {
         gtag("event", "contact_click", { method: "email" });
       } else if (a.closest(".nav-links")) {
         gtag("event", "profile_link_click", { link_label: a.textContent.trim(), link_url: a.href });
+      } else if (item && a.closest(".bib-links")) {
+        var ref = item.querySelector(".bib-reference-text [id]");
+        var img = item.querySelector("img[alt^='Thumbnail for ']");
+        gtag("event", "paper_link_click", {
+          link_type: a.textContent.trim(),
+          paper_key: ref ? ref.id : "",
+          paper_title: img ? img.alt.replace("Thumbnail for ", "") : "",
+          link_url: a.getAttribute("href") === "#" ? "" : a.href
+        });
       }
     });
   </script>
