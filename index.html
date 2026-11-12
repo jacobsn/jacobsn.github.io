@@ -8,6 +8,13 @@ rawtitle: true
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Nathan Jacobs">
+  <meta name="description" content="Nathan Jacobs develops computer vision and AI methods for understanding the physical and natural world. Professor of Computer Science & Engineering and Vice Provost for Artificial Intelligence at Washington University in St. Louis.">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Nathan Jacobs">
+  <meta property="og:description" content="AI for understanding the physical and natural world. Professor of Computer Science & Engineering and Vice Provost for Artificial Intelligence at Washington University in St. Louis.">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}/images/nathan_jacobs.jpg">
 
   <title>Nathan Jacobs</title>
 
@@ -19,7 +26,7 @@ rawtitle: true
   <link rel="stylesheet" href="stylesheet.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKB7GNY99L"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q08N5VMDQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -34,14 +41,24 @@ rawtitle: true
 
 <body>
   <div class="container">
+
+    <!-- Header -->
     <div class="row mt-3 mb-3">
       <div class="col-lg-3 col-md-4 text-center mb-3">
-        <img class="profile-photo" alt="profile photo" src="images/nathan_jacobs.jpg" />
+        <img class="profile-photo" alt="Nathan Jacobs" src="images/nathan_jacobs.jpg" />
       </div>
       <div class="col-lg-9 col-md-8">
         <h1>Nathan Jacobs</h1>
-        <p class="lead">Dr. Nathan Jacobs is a Professor in the Computer Science &amp; Engineering department at Washington University in St. Louis and Director of the <a href="{{site.laburl}}">Multimodal Vision Research Laboratory</a>. His research focuses on computer vision, specializing in learning-based algorithms for processing large-scale image collections. His current work develops techniques for understanding the visual world from geotagged imagery, including images from social networks, outdoor webcams, and satellites. His research has been funded by NSF, NIH, DARPA, IARPA, NGA, ARL, AFRL, and Google.</p>
-        <p class="lead">He has graduated 14 PhD students, with 6 placed in tenure-track faculty positions and others at leading technology companies including Microsoft, Zillow, and Kitware. He has also mentored numerous MS students and undergraduates, many of whom have gone on to pursue advanced degrees or careers in industry.</p>
+        <p class="title-line">Professor of Computer Science &amp; Engineering<br>
+          Vice Provost for Artificial Intelligence<br>
+          Director, <a href="{{site.laburl}}">Multimodal Vision Research Laboratory</a><br>
+          Washington University in St. Louis</p>
+        <p class="lead">I develop new computer vision and AI methods for understanding the physical and natural
+          world. My lab's research spans multimodal representation learning, geospatial foundation models, and
+          generative modeling, with models that learn from satellite imagery, ground-level photos, sound, and text. We
+          apply these methods with collaborators on problems in agriculture, ecology, forestry, air quality, natural
+          hazards, and public health. As Vice Provost for Artificial Intelligence, I help make that kind of
+          collaboration work across an entire university.</p>
         <div class="nav-links">
           <a href="{{site.laburl}}">Research Lab</a> &nbsp;/&nbsp; <a href="cv.pdf">CV</a> &nbsp;/&nbsp; <a
             href="https://scholar.google.com/citations?hl=en&user=ZBgGyh8AAAAJ">Scholar</a> &nbsp;/&nbsp; <a
@@ -51,38 +68,102 @@ rawtitle: true
       </div>
     </div>
 
+    <!-- What I work on -->
     <div class="row mt-4">
       <div class="col-12">
-        <h2>Roles and Affiliations</h2>
+        <h2>What I Work On</h2>
+      </div>
+    </div>
+    <div class="row g-4 mt-0">
+
+      <div class="col-md-6">
+        <div class="focus-card">
+          <h4 class="focus-head"><i class="bi bi-globe-americas"></i>Novel AI methods</h4>
+          <p>My lab develops computer vision and machine learning methods that connect many ways of observing the
+            world, from satellite imagery and ground-level photos to sound and text. Recent examples include <a href="https://vishu26.github.io/taxabind">TaxaBind</a>, a shared embedding
+            space for six kinds of ecological data, and <a href="https://vishu26.github.io/terradit/">TerraDiT</a>,
+            a generative Earth model that won a best paper award at ECCV 2026's TerraBytes workshop. We publish at
+            CVPR, ICCV, ECCV, NeurIPS, and WACV, and release code, models, and data.</p>
+          <a class="focus-link" href="{{site.laburl}}/research/">Lab research areas &rarr;</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="focus-card">
+          <h4 class="focus-head"><i class="bi bi-people"></i>AI for impact</h4>
+          <p>Much of our most consequential work is part of larger collaborative efforts, where we contribute AI
+            methods and models:</p>
+          <ul class="collab-list">
+            <li><strong>Agriculture:</strong> <a href="https://fieldsofthe.world/">Fields of The World</a> and the
+              <a href="https://arxiv.org/abs/2605.11055">first global 10&nbsp;m field boundary map</a></li>
+            <li><strong>Forests:</strong> <a href="https://deadtrees.earth">deadtrees.earth</a> and
+              <a href="https://eartharxiv.org/repository/view/11912/">global tree mortality mapping</a></li>
+            <li><strong>Air quality:</strong> <a href="https://doi.org/10.1021/acsestair.3c00054">global fine
+              particulate matter estimation</a></li>
+            <li><strong>Natural hazards:</strong> <a href="https://doi.org/10.1029/2025EA004937">landslide mapping
+              from lidar</a></li>
+            <li><strong>Public health:</strong> <a href="https://doi.org/10.1007/s10389-025-02444-x">built
+              environment and health</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="focus-card">
+          <h4 class="focus-head"><i class="bi bi-bank"></i>AI across a university</h4>
+          <p>As Vice Provost for Artificial Intelligence at WashU, I help lead university-wide strategy for AI in
+            research and education: shared AI infrastructure, support for researchers in every discipline who want to
+            use AI in their work, AI in teaching and learning, and partnerships with industry, government, and
+            foundations.</p>
+          <a class="focus-link" href="https://ai.washu.edu/">AI at WashU &rarr;</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="focus-card">
+          <h4 class="focus-head"><i class="bi bi-mortarboard"></i>People</h4>
+          <p>I have advised 14 PhD graduates. Six hold tenure-track faculty positions, and others work at leading
+            technology companies including Microsoft, Zillow, and Kitware. I have also mentored many MS and
+            undergraduate researchers who have gone on to graduate study and industry careers.</p>
+          <a class="focus-link" href="{{site.laburl}}/people/">Lab members and alumni &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+      Writing and talks: add this section once there are 2-3 items to list.
+      Suggested format: one line per item with date, title, and venue/link.
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <h2>Writing and Talks</h2>
         <ul class="roles-list">
-          <li>Vice Provost for <a
-href="https://ai.washu.edu/">Artificial Intelligence</a>, Washington University in St. Louis</li>
-          <li><a href="https://engineering.wustl.edu/faculty/Nathan-Jacobs.html">Professor</a>, <a href="http://cse.wustl.edu/">Computer Science &amp; Engineering</a> (primary), with appointments in <a href="http://ese.wustl.edu/">Electrical &amp; Systems Engineering</a>, <a href="https://datasciences.wustl.edu/">Computational and Data Science</a>, and <a href="https://engineering.wustl.edu/academics/programs/imaging-science/index.html">Imaging Science</a> at <a href="http://www.washu.edu/">Washington University in St. Louis</a></li>
-          <li>Director, <a href="https://mvrl.washu.edu/">Multimodal Vision Research Laboratory</a></li>
-          <li>Co-Director, <a href="https://geospatial.wustl.edu/">WashU Geospatial Research Initiative</a></li>
+          <li></li>
         </ul>
       </div>
     </div>
+    -->
 
-<!--
+    <!-- Selected work -->
     <div class="row mt-4">
       <div class="col-12">
-        <h2>Selected Achievements</h2>
-        <ul class="achievements-list">
-          <li>National Science Foundation CAREER Award, 2016</li>
-          <li>Google Faculty Research Awards, 2016 and 2018</li>
-          <li>Best Paper Award, EarthVision Workshop at CVPR 2024</li>
-        </ul>
-      </div>
-    </div>
--->
-
-    <div class="row mt-4">
-      <div class="col-12">
-        <h2>Selected Contributions</h2>
-        <p class="mb-3" style="font-size: 0.95rem;">See <a href="{{site.laburl}}/publications/">my lab's page</a> for a complete listing of publications.</p>
+        <h2>Selected Research</h2>
+        <p class="mb-3" style="font-size: 0.95rem;">See <a href="{{site.laburl}}/publications/">my lab's page</a> for
+          a complete listing of publications.</p>
         <div class="publications-sidebar">
           {% bibliography --template bib-picture --max 10 --query @*[spotlight~=true] %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="contact-box">
+          <p class="mb-0">I'm glad to hear from people and organizations working on AI for science, Earth
+            observation, or AI in research and education. Email: <a
+              href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 url : https://jacobsn.github.io
 baseurl :
-laburl : https://mvrl.cse.wustl.edu
+laburl : https://mvrl.washu.edu
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "deploy.sh", "Gemfile", "Makefile", "Gemfile.lock"]
 highlighter: rouge 

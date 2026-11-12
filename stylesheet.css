@@ -203,3 +203,68 @@ ol.bibliography li img {
     max-width: 150px;
   }
 }
+
+/* Title line under name */
+.title-line {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.45;
+  margin-bottom: 0.9rem;
+}
+
+/* "What I work on" cards */
+.focus-card {
+  height: 100%;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid #e6e6e6;
+  border-top: 3px solid #a51419;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.focus-card h4.focus-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin: 0 0 0.6rem;
+  color: #222;
+}
+
+.focus-head i {
+  color: #a51419;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.focus-card p {
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.focus-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.collab-list {
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+  color: #555;
+}
+
+.collab-list li {
+  margin-bottom: 0.45rem;
+  line-height: 1.5;
+}
+
+.contact-box {
+  padding: 1rem 1.25rem;
+  background: #f8f9fa;
+  border-left: 3px solid #a51419;
+  border-radius: 6px;
+  color: #444;
+}

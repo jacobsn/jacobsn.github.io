@@ -31,6 +31,27 @@
 %   vlm                - Vision-language models and multimodal learning
 %   webcam             - Outdoor webcam networks and environmental monitoring
 
+
+@inproceedings{elallaf2027,
+  annotation    = {remote_sensing,geoai,transportation,urban},
+  title         = {Location-Conditioned Crash Risk Estimation from Satellite Imagery},
+  author        = {Ahmad Elallaf and Noah Sizemore and Yu Zhang and Nathan Jacobs and Gongbo Liang},
+  year          = {2027},
+  month         = Jan,
+  booktitle     = {Workshop on Computer Vision for Geospatial Image Analysis (GeoCV) (IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshop)},
+}
+
+@misc{shi2026location,
+      title={Not Where You Think: Protecting Location Privacy Against Reasoning-Based Geolocation}, 
+      annotation   = {localization,geoai},
+      author={Shanghao Shi and Jian Xiao and Hao Li and Yuanhaur Chang and Yevgeniy Vorobeychik and Nathan Jacobs and Neal Patwari and Ning Zhang},
+      year={2026},
+      eprint={2610.30439},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2610.30439}, 
+}
+
 @inproceedings{iqbal2027geodive,
   annotation    = {remote_sensing,geoai,vlm},
   author        = {Hamza Iqbal and Dan Cher and Eric Xing and Pranavi Kolouju and Abby Stylianou and Robert Pless and Nathan Jacobs},
@@ -38,6 +59,11 @@
   title         = {{GeoDIVE}: Geospatial Descent Informed by Value Estimation},
   booktitle     = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   month         = Jan,
+  code          = {https://github.com/mvrl/geodive},
+  pdf={https://arxiv.org/pdf/2611.05697},
+  eprint={2611.05697},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
   year          = {2027}
 }
 
@@ -70,13 +96,14 @@
 
 @article{favarao2026,
   annotation = {urban,geoai},
-  title    = {Exploring Spatial Inequities and Livability: A mixed-methods study using artificial intelligence and community insights},
-  journal  = {Journal of Urban Health},
-  author   = {Favarão Leão, Ana Luiza and Wang, Yi and Banda, Bernard
-    and Balogun, Mariam and Xing, Eric and Gudapati, Sanketh and Rios-Hernandez, Maryse and Jacobs, Nathan and Siqueira Reis, Rodrigo},
-  year     = {2026}
+	abstract = {Rapid urbanization has intensified health and social inequities through the uneven distribution of infrastructure, services, and public space. In St. Louis, Missouri (USA), these disparities remain geographically concentrated and rooted in long-standing patterns of racial segregation and disinvestment. This study examines how spatial inequities shape urban livability by integrating scalable artificial intelligence (AI) methods with community-based insights. We applied a vision--language model (VLM), supported by a large language model (LLM), to classify micro-scale built-environment features from 7848 Google Street View segments, and conducted semi-structured interviews with residents and stakeholders. The AI analysis revealed baseline infrastructure such as street lighting (84.9{\%}) and continuous pavements (77{\%}), but very low coverage of universal design features such as curb ramps (9.7{\%}) and pedestrian crossings (7.1{\%}). These deficits were significantly associated with lower median incomes and higher proportions of non-Hispanic Black residents. Qualitative findings confirmed and contextualized these patterns, linking them to historical redlining, fragmented governance, and everyday experiences of constrained mobility and safety. By combining scalable AI tools with community narratives, this study demonstrates that spatial inequities are both visible in the physical streetscape and embodied in daily life. Methodologically, it advances the use of VLM and LLM-enabled pipelines for urban audits; conceptually, it reframes livability metrics through the lens of spatial equity; and practically, it provides a replicable framework for equity-centered planning.},
+	author = {Favar{\~a}o Le{\~a}o, Ana Luiza and Wang, Yi and Banda, Bernard F. and Balogun, Mariam and Xing, Eric and Gudapati, Sanketh and Rios-Hernandez, Maryse and Jacobs, Nathan and Siqueira Reis, Rodrigo},
+	year = 2026, month=11, day=02,
+	doi = {10.1007/s11524-026-01170-3},
+	journal = {Journal of Urban Health},
+	title = {Exploring Spatial Inequities and Livability: A Mixed-Methods Study Using Artificial Intelligence and Community Insights},
+	url = {https://doi.org/10.1007/s11524-026-01170-3},
 }
-
 
 
 @inproceedings{khanal2026genesis,
@@ -99,7 +126,7 @@
 
 @inproceedings{gao2026trajectory,
   spotlight     = {true},
-  annotation    = {generative,geoai,remote_sensing,motion,transportation},
+  annotation    = {generative,geoai,remote_sensing,motion,localization,transportation},
   author        = {Tianyi Gao and Jiayu Lin and Danielle Beaulieu and Nathan Jacobs},
   title         = {Trajectory-aware Cross-view Geo-Localization with Sequential Observations},
   booktitle     = {European Conference on Computer Vision (ECCV)},
