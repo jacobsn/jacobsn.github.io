@@ -169,6 +169,18 @@ rawtitle: true
     </div>
 
   </div>
+  <script>
+    // Analytics: record clicks on the email link and the profile links in the header.
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a");
+      if (!a || typeof gtag !== "function") return;
+      if (a.href.indexOf("mailto:") === 0) {
+        gtag("event", "contact_click", { method: "email" });
+      } else if (a.closest(".nav-links")) {
+        gtag("event", "profile_link_click", { link_label: a.textContent.trim(), link_url: a.href });
+      }
+    });
+  </script>
 </body>
 
 </html>
