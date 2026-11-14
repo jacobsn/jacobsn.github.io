@@ -299,6 +299,11 @@ ol.bibliography li img {
   white-space: nowrap;
 }
 
+/* Paper names (paper_ref links) stand out from the people. */
+.news-text a.paper-ref {
+  font-weight: 600;
+}
+
 @media (max-width: 576px) {
   .news-list li {
     grid-template-columns: 1fr;
