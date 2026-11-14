@@ -6,7 +6,7 @@ preview:
 
 deploy:
 	@echo "# deploying jacobsn.github.io"
-	git add -u && \
+	git add -u && git add _data/news.json && \
 	git diff-index --quiet HEAD || git commit &&\
 	git push
 

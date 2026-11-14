@@ -145,6 +145,21 @@ rawtitle: true
     </div>
     -->
 
+    <!-- Recent news: _data/news.json is exported from the lab site (mvrl_website/news.json) on deploy -->
+    {% if site.data.news and site.data.news.size > 0 %}
+    <div class="row mt-4">
+      <div class="col-12">
+        <h2>Recent News</h2>
+        <ul class="news-list">
+          {% for item in site.data.news limit:5 %}
+          <li><span class="news-date">{{ item.date | date: "%b %Y" }}</span><span class="news-text">{{ item.html }}</span></li>
+          {% endfor %}
+        </ul>
+        <p style="font-size: 0.95rem;"><a href="{{site.laburl}}/oldnews.html">All lab news &rarr;</a></p>
+      </div>
+    </div>
+    {% endif %}
+
     <!-- Selected work -->
     <div class="row mt-4">
       <div class="col-12">

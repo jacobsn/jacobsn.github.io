@@ -268,3 +268,36 @@ ol.bibliography li img {
   border-radius: 6px;
   color: #444;
 }
+
+/* Recent news (from the lab site's news.json) */
+.news-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.news-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  line-height: 1.6;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex: 0 0 5.5rem;
+  color: #777;
+  font-size: 0.9rem;
+  padding-top: 0.1rem;
+}
+
+@media (max-width: 576px) {
+  .news-list li {
+    flex-direction: column;
+    gap: 0;
+  }
+}
