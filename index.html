@@ -23,7 +23,7 @@ rawtitle: true
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700">
-  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="stylesheet.css?v={{ site.time | date: '%s' }}">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q08N5VMDQ"></script>
@@ -152,7 +152,7 @@ rawtitle: true
         <h2>Recent News</h2>
         <ul class="news-list">
           {% for item in site.data.news limit:5 %}
-          <li><span class="news-date">{{ item.date | date: "%b %Y" }}</span><span class="news-text">{{ item.html }}</span></li>
+          <li><span class="news-date">{{ item.date | date: "%b %d, %Y" }}</span><span class="news-text">{{ item.html }}</span></li>
           {% endfor %}
         </ul>
         <p style="font-size: 0.95rem;"><a href="{{site.laburl}}/oldnews.html">All lab news &rarr;</a></p>

@@ -269,17 +269,21 @@ ol.bibliography li img {
   color: #444;
 }
 
-/* Recent news (from the lab site's news.json) */
+/* Recent news (from the lab site's news.json); matches the lab homepage */
 .news-list {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 0.5rem;
+  margin: 0 0 1rem;
+  /* Keep lines to a readable length (~90 characters). */
+  max-width: 52rem;
 }
 
 .news-list li {
-  display: flex;
-  gap: 1rem;
-  padding: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.25rem;
+  align-items: baseline;
+  padding: 14px 0;
   border-bottom: 1px solid #eee;
   line-height: 1.6;
 }
@@ -289,15 +293,15 @@ ol.bibliography li img {
 }
 
 .news-date {
-  flex: 0 0 5.5rem;
-  color: #777;
+  font-weight: 700;
+  color: #666;
   font-size: 0.9rem;
-  padding-top: 0.1rem;
+  white-space: nowrap;
 }
 
 @media (max-width: 576px) {
   .news-list li {
-    flex-direction: column;
-    gap: 0;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
 }
