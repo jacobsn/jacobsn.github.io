@@ -122,7 +122,32 @@ rawtitle: true
       <div class="col-md-6">
         <div class="focus-card">
           <h4 class="focus-head"><i class="bi bi-mortarboard"></i>People</h4>
-          <p>I have advised 14 PhD graduates. Six hold tenure-track faculty positions, and others work at leading
+          {%- comment -%}
+            Counts come from _data/lab_stats.json, exported from mvrl_website/_data/people.yml
+            by `make build`/`make deploy` there. Format: role:singular:plural.
+          {%- endcomment -%}
+          {%- assign lab = site.data.lab_stats -%}
+          {%- assign role_specs = "phd:PhD student:PhD students|postdoc:postdoc:postdocs|staff:research staff member:research staff|visiting:visiting researcher:visiting researchers|masters:MS student:MS students|undergrad:undergraduate researcher:undergraduate researchers|highschool:high school student:high school students" | split: "|" -%}
+          {%- assign number_words = "zero,one,two,three,four,five,six,seven,eight,nine" | split: "," -%}
+          {%- assign lab_parts = "" | split: "" -%}
+          {%- for spec in role_specs -%}
+            {%- assign f = spec | split: ":" -%}
+            {%- assign role_key = f[0] -%}
+            {%- assign n = lab.current[role_key] | default: 0 -%}
+            {%- if n > 0 -%}
+              {%- if n < 10 -%}{%- assign count = number_words[n] -%}{%- else -%}{%- assign count = n -%}{%- endif -%}
+              {%- if n == 1 -%}{%- assign noun = f[1] -%}{%- else -%}{%- assign noun = f[2] -%}{%- endif -%}
+              {%- assign part = count | append: " " | append: noun -%}
+              {%- assign lab_parts = lab_parts | push: part -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if lab_parts.size > 1 -%}
+            {%- assign lab_last = lab_parts | last -%}
+            {%- assign lab_list = lab_parts | pop | join: ", " | append: ", and " | append: lab_last -%}
+          {%- else -%}
+            {%- assign lab_list = lab_parts | join: "" -%}
+          {%- endif %}
+          <p>{% if lab %}My lab currently has {{ lab.current.total }} members: {{ lab_list }}. {% endif %}I have advised {{ lab.phd_graduates | default: 14 }} PhD graduates. Six hold tenure-track faculty positions, and others work at leading
             technology companies including Microsoft, Zillow, and Kitware. I have also mentored many MS and
             undergraduate researchers who have gone on to graduate study and industry careers.</p>
           <a class="focus-link" href="{{site.laburl}}/people/">Lab members and alumni &rarr;</a>
