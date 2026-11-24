@@ -33,7 +33,7 @@ h6 {
 h1 {
   font-size: 2.9rem;
   padding-top: 0;
-  color: #a51419;
+  color: #a51417;
   margin-bottom: 0.75rem;
 }
 
@@ -41,7 +41,7 @@ h2 {
   font-size: 2.2rem;
   padding-top: 0.75em;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #a51419;
+  border-bottom: 2px solid #a51417;
   display: inline-block;
   padding-bottom: 8px;
 }
@@ -50,14 +50,14 @@ h3 {
   font-size: 1.5rem;
   padding-top: 1.5em;
   margin-bottom: 1rem;
-  color: #a51419;
+  color: #a51417;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-bottom: 1px solid #ddd;
 }
 
 a {
-  color: #a51419;
+  color: #a51417;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -96,7 +96,7 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: #a51419;
+  color: #a51417;
   text-decoration: none;
 }
 
@@ -198,7 +198,7 @@ ol.bibliography li img {
 }
 
 .publications-sidebar .label-default:hover {
-  background-color: #a51419;
+  background-color: #a51417;
   color: white;
   text-decoration: none;
 }
@@ -231,7 +231,7 @@ ol.bibliography li img {
   height: 100%;
   padding: 1.1rem 1.3rem;
   border: 1px solid #e6e6e6;
-  border-top: 3px solid #a51419;
+  border-top: 3px solid #a51417;
   border-radius: 8px;
   background: #fff;
 }
@@ -246,7 +246,7 @@ ol.bibliography li img {
 }
 
 .focus-head i {
-  color: #a51419;
+  color: #a51417;
   font-size: 1.3rem;
   line-height: 1.1;
   flex-shrink: 0;
@@ -276,7 +276,7 @@ ol.bibliography li img {
 .contact-box {
   padding: 1rem 1.25rem;
   background: #f8f9fa;
-  border-left: 3px solid #a51419;
+  border-left: 3px solid #a51417;
   border-radius: 6px;
   color: #444;
 }
