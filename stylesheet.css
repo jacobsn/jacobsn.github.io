@@ -227,8 +227,10 @@ ol.bibliography li img {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  font-size: 1.15rem;
-  line-height: 1.35;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
   margin: 0 0 0.6rem;
   color: #222;
 }
