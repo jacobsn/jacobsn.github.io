@@ -1,31 +1,44 @@
+/* Metric-compatible Arial fallback for ivystyle-sans (same as the lab site),
+   so text doesn't visibly reflow once the webfont loads. */
+@font-face {
+  font-family: "IvyStyleFallback";
+  size-adjust: 95%;
+  ascent-override: 90%;
+  src: local(Arial);
+  font-display: swap;
+}
+
 body {
   padding-top: 15px;
   padding-bottom: 30px;
   font-size: 1.05rem;
   line-height: 1.6;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "ivystyle-sans", "IvyStyleFallback", 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
 
+/* WashU sets IvyPresto at regular weight only; bold makes it look cramped. */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Libre Baskerville", "Times New Roman", serif;
+  font-family: "ivypresto-headline", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   padding-top: 0;
   color: #a51419;
-  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding-top: 0.75em;
   margin-bottom: 1rem;
   border-bottom: 2px solid #a51419;
@@ -192,11 +205,11 @@ ol.bibliography li img {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
-  
+
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   
   .profile-photo {
@@ -227,10 +240,7 @@ ol.bibliography li img {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.25;
+  font-size: 1.35rem;
   margin: 0 0 0.6rem;
   color: #222;
 }
