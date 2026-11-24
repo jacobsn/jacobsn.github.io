@@ -2,12 +2,12 @@
   "current": {
     "phd": 14,
     "postdoc": 1,
-    "staff": 2,
-    "visiting": 0,
-    "masters": 0,
+    "staff": 1,
+    "visiting": 1,
+    "masters": 2,
     "undergrad": 3,
     "highschool": 0,
-    "total": 20
+    "total": 22
   },
   "phd_graduates": 15
 }
